@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/classify_list2.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+</head>
+<body>
+	<!---------------------header------------------->
+	<header class="mui-header clearfix">
+		<a id="return-zc" class="mui-action-back mui-icon mui-icon-back"></a>
+		<div id="nav-zc">
+				<p>
+					<span class="active-zc">商品</span>
+				</p>
+				<p>
+					<span>详情</span>
+				</p>
+				<p>
+					<span>评价</span>
+				</p>
+		</div>
+		<a id="shopCar-zc">
+	        <span class="mui-icon iconfont icon-gouwuche"></span>
+			<span class="num-zc">0</span>
+	    </a>
+	</header>
+	<!---------------------wrap1-------------------->
+	<div class="wrap-wrap">
+		<div class="wrap-zc">
+			<div class="inner-zc clearfix">
+				<!--轮播图-->
+				<div id="slider" class="mui-slider" >
+					<div class="mui-slider-group mui-slider-loop">
+						<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/classify/xiaomi6.jpg">
+							</a>
+						</div>
+						<!-- 第一张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/classify/xiaomi.jpg">
+							</a>
+						</div>
+						<!-- 第二张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/classify/xiaomi4.jpg">
+							</a>
+						</div>
+						<!-- 第三张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/classify/xiaomi5.jpg">
+							</a>
+						</div>
+						<!-- 第四张 -->
+						<div class="mui-slider-item">
+							<a href="#">
+								<img src="images/classify/xiaomi6.jpg">
+							</a>
+						</div>
+						<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#">
+								<img src="images/classify/xiaomi.jpg">
+							</a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator">
+						<div class="mui-indicator mui-active"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+						<div class="mui-indicator"></div>
+					</div>
+				</div>
+				<!--轮播图-->
+				<!--图片详情-->
+				<div class="details-zc clearfix">
+					<div class="phone-zc">小米Max智能安卓6.4吋大屏手机双卡指纹识别Xiaomi/小米 小米Max</div>
+					<!--<p class="linear-zc"></p>-->
+					<div class="share-zc">
+						<span class="mui-icon iconfont icon-fenxiang"></span>
+						<p>分享</p>
+					</div>
+					
+				</div>
+				<div class="price-zc">
+					<span class="price-span1-zc">3999购物券+$999</span>
+					<span class="price-span2-zc">销量：8件</span>
+				</div>
+				<!--图片详情-->
+				<!--商品详情-->
+				<div class="goods-zc">
+					<span>商品详情</span>
+					<span id="goods-span-zc" class="mui-icon mui-icon-arrowright"></span>
+				</div>
+				<!--商品详情-->
+				<!---->
+				<div class="goods-zc">
+					<span>商品评价</span>
+					<span id="goods-span-zc" class="mui-icon mui-icon-arrowright"></span>
+				</div>
+			</div>
+		</div>		
+		<!--wrap2-->
+		<div class="wrap-zc" id="wrap1">
+			<div class="inner-zc clearfix">
+				<!--商品介绍.规格参数.包装售后-->
+				<div id="information-zc">
+					<p>
+						<span class="red-zc">商品介绍</span>
+					</p>
+					<p>
+						<span>规格参数</span>
+					</p>
+					<p>
+						<span>包装售后</span>
+					</p>
+				</div>
+				<div class="information-datails">
+					<!--商品介绍-->
+					<div class="information-footer-zc" id="information-good-zc">
+						<img src="images/classify/xiaomi1.jpg" alt="" />
+						<img src="images/classify/xiaomi2.jpg" alt="" />
+						<img src="images/classify/xiaomi3.jpg" alt="" />
+					</div>
+					<!--规格参数-->
+					<div class="information-footer-zc" id="index-zc">
+						<table id="table-zc" cellspacing="10px" cellpadding="10px">
+							<tr>
+								<td colspan="2"><strong>存储</strong></td>
+							</tr>
+							<tr>
+								<td>ROM</td>
+								<td>128GB</td>
+							</tr>
+							<tr>
+								<td>RAM</td>
+								<td>4GB</td>
+							</tr>
+							<tr>
+								<td>储存卡</td>
+								<td>支持MicroSD（TF）</td>
+							</tr>
+							<tr>
+								<td>最大存储扩展容量</td>
+								<td>128GB</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>基本信息</strong></td>
+							</tr>
+							<tr>
+								<td>机身长度<br/>(mm)</td>
+								<td>173.1</td>
+							</tr>
+							<tr>
+								<td>机身宽度<br/>(mm)</td>
+								<td>88.3</td>
+							</tr>
+							<tr>
+								<td>机身厚度<br/>(mm)</td>
+								<td>7.5</td>
+							</tr>
+							<tr>
+								<td>机身重量<br/>(g)</td>
+								<td>203</td>
+							</tr>
+							<tr>
+								<td>输入方式</td>
+								<td>触控</td>
+							</tr>
+							<tr>
+								<td>运营商标志或内容</td>
+								<td>无</td>
+							</tr>
+							<tr>
+								<td>机身材质分类</td>
+								<td>金属边框</td>
+							</tr>
+							<tr>
+								<td>机身材质分类</td>
+								<td>金属后盖</td>
+							</tr>
+							<tr>
+								<td>机身颜色</td>
+								<td>金色</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>网络支持</strong></td>
+							</tr>
+							<tr>
+								<td>双卡机类型</td>
+								<td>双卡双待单通</td>
+							</tr>
+							<tr>
+								<td>最大支持SIM卡数量</td>
+								<td>2个</td>
+							</tr>
+							<tr>
+								<td>SIM卡类型</td>
+								<td>Nano SIM</td>
+							</tr>
+							<tr>
+								<td>4G网络</td>
+								<td>4G：移动（TD-LTE)</td>
+							</tr>
+							<tr>
+								<td>4G网络</td>
+								<td>4G：联通(TD-LTE)</td>
+							</tr>
+							<tr>
+								<td>4G网络</td>
+								<td>4G：电信(FDD-LTE)</td>
+							</tr>
+							<tr>
+								<td>3G/2G网络</td>
+								<td>3G：移动(TD-SCDMA)</td>
+							</tr>
+							<tr>
+								<td>3G/2G网络</td>
+								<td>3G：联通(WCDMA)</td>
+							</tr>
+							<tr>
+								<td>3G/2G网络</td>
+								<td>3G：电信(CDMA2000)</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>主体</strong></td>
+							</tr>
+							<tr>
+								<td>品牌</td>
+								<td>小米（MI）</td>
+							</tr>
+							<tr>
+								<td>型号</td>
+								<td>小米Max</td>
+							</tr>
+							<tr>
+								<td>上市年份</td>
+								<td>2016年</td>
+							</tr>
+							<tr>
+								<td>上市月份</td>
+								<td>5月</td>
+							</tr>
+							<tr>
+								<td colspan="2"><strong>操作系统</strong></td>
+							</tr>
+							<tr>
+								<td>操作系统</td>
+								<td>其他</td>
+							</tr>
+							<tr>
+								<td>操作系统版本</td>
+								<td>MIUI</td>
+							</tr>
+						</table>
+					</div>
+					<!--包装售后-->
+					<div class="information-footer-zc" id="sale-zc">
+						<p>包装清单：</p>
+						<p>手机主机×1、电源适配器×1、USB 数据线×1、三包凭证×1、入门指南×1、插针×1</p>
+						<p>售后服务：</p>
+						<p>
+							本产品全国联保，享受三包服务，质保期为：一年质保
+							<br/>
+							如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！
+							<br/>
+							售后服务电话：400-100-5678
+							<br/>
+							品牌官方网站：
+							<a target="_blank" href="http://www.mi.com">http://www.mi.com</a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--wrap3-->
+		<div class="wrap-zc" id="wrap2">
+			<div class="inner-zc clearfix"></div>
+				<div id="assess-zc">
+						<div>
+							<span>全部评价</span><br/>
+							<span>160000</span>
+						</div>
+						<div>
+							<span>好评</span><br/>
+							<span>16000</span>
+						</div>
+						<div>
+							<span>中评</span><br/>
+							<span>1600</span>
+						</div>
+						<div>
+							<span>差评</span><br/>
+							<span>160</span>
+						</div>
+						<div>
+							<span>有图</span><br/>
+							<span>16</span>
+						</div>
+				</div>
+				<div id="assess-content-zc">
+					<div class="assess-top-zc clearfix">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span>张***三</span>
+						<span>2017-01-01</span>
+					</div>
+					<div class="assess-middle-zc">
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<p>
+							货收到，京东配送就是放心！好快就送到我手上了，快递哥很给力，点赞！包装很好，开包后看上去不错，与网上描述相符，但还没开始使用，不知道好不好用，这么大屏幕好喜欢！国产货应该放心吧。
+						</p>
+					</div>
+					<div class="assess-footer-zc">
+						<span>购买日期：2016-12-25 14:58:08</span>
+						<span>颜色：灰色 型号：标准版（128G ROM）</span>
+					</div>
+				</div>
+				<div id="assess-content-zc">
+					<div class="assess-top-zc clearfix">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span>李***四</span>
+						<span>2017-03-03</span>
+					</div>
+					<div class="assess-middle-zc">
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<p>
+							货收到，京东配送就是放心！好快就送到我手上了，快递哥很给力，点赞！包装很好，开包后看上去不错，与网上描述相符，但还没开始使用，不知道好不好用，这么大屏幕好喜欢！国产货应该放心吧。
+						</p>
+					</div>
+					<div class="assess-footer-zc">
+						<span>购买日期：2017-02-02 11:11:11</span>
+						<span>颜色：金色 型号：标准版（128G ROM）</span>
+					</div>
+				</div>
+				<div id="assess-content-zc">
+					<div class="assess-top-zc clearfix">
+						<span class="mui-icon mui-icon-contact"></span>
+						<span>赵***五</span>
+						<span>2017-04-20</span>
+					</div>
+					<div class="assess-middle-zc">
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<span class="mui-icon mui-icon-star"></span>
+						<p>
+							货收到，京东配送就是放心！好快就送到我手上了，快递哥很给力，点赞！包装很好，开包后看上去不错，与网上描述相符，但还没开始使用，不知道好不好用，这么大屏幕好喜欢！国产货应该放心吧。
+						</p>
+					</div>
+					<div class="assess-footer-zc">
+						<span>购买日期：2017-04-05 14:58:08</span>
+						<span>颜色：金色 型号：标准版（128G ROM）</span>
+					</div>
+				</div>
+			</div>	
+		</div>	
+	</div>
+
+	<!---------------商城.客服.购物车----------------->
+	<nav class="mui-bar mui-bar-tab">
+		<div class="shopping-zc">
+			<div class="shopping-1-zc">
+				<span id="mall-zc" class="mui-icon mui-icon-home"></span>
+				<span class="mall-zc">商城</span>
+			</div>
+			<div class="shopping-2-zc">
+				<span id="chat-zc" class="mui-icon mui-icon-chat"></span>
+				<span class="chat-zc">客服</span>
+			</div>
+			<div class="shopping-3-zc">加入购物车</div>
+			<div id="buyBtn" class="shopping-4-zc">立刻购买</a></div>
+		</div>
+	</nav>
+
+	<!---------------加入购物车----------------->
+	<div class="shopping-cart-zc">
+		<div class="mask-zc"></div>
+		<div class="shopping-cart-content-zc">
+			<div class="shopping-cart-top-zc">
+				<img src="images/classify/xiaomiphone.jpg" alt="" />
+				<div class="shopping-xiaomi-zc">
+					<span>小米Max</span>
+					<span class="shopping-cart-price-zc">3999购物券+$999</span>
+				</div>
+				<span id="shopping-close-zc" class="mui-icon mui-icon-close"></span>
+				
+			</div>
+			<div class="shopping-color-zc">
+					<p>颜色分类</p>
+					<span class="springgreen-active gray-active">金色</span>
+					<span class="gray-active">灰色</span>
+			</div>
+			<div class="shopping-color-zc">
+					<p>机身内存</p>
+					<span class="springgreen-active gray-active">128G</span>
+					<span class="gray-active">16G</span>
+			</div>
+			<div class="shopping-cart-footer-zc clearfix">
+				<p class="shopping-num-zc">购买数量</p>
+				<div id="shopping-btn-zc" class="">
+					<span id="left-btn" class="">-</span>
+					<input id="test" class="" value="1" />
+					<span id="right-btn" class="">+</span>
+				</div>
+			</div>
+			<div class="shopping-footer-sure-zc">
+				<a>确定</a>
+			</div>
+		</div>
+	</div>
+	<!-------------------------footer---------------------------->
+	<!--<nav class="mui-bar mui-bar-tab">
+	    <a class="mui-tab-item">
+	        <span class="mui-icon mui-icon-home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item mui-active">
+	        <span class="mui-icon iconfont icon-fenlei"></span>
+	        <span class="mui-tab-label">分类</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon iconfont icon-icongouwuche"></span>
+	        <span class="mui-tab-label">购物车</span>
+	    </a>
+	    <a class="mui-tab-item">
+	        <span class="mui-icon iconfont icon-wode"></span>
+	        <span class="mui-tab-label">设置</span>
+	    </a>
+	</nav>	-->
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+//----------------监测屏幕大小--------------
+(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+            }
+        };
+
+    if (!doc.addEventListener) return;
+    win.addEventListener(resizeEvt, recalc, false);
+    doc.addEventListener('DOMContentLoaded', recalc, false);
+})(document, window);
+//------------------导航按钮---------------
+var $navActive=$("#nav-zc p span");
+var $infoActive=$("#information-zc p span");
+var $wrap=$(".wrap-zc");
+var $info=$(".information-footer-zc");
+$navActive.on("tap",function(){
+	$(this).addClass("active-zc").parent().siblings().find($navActive).removeClass("active-zc");
+	//id=wrap1
+	$wrap.eq($(this).parent().index()).show().siblings().hide();
+});
+$infoActive.on("tap",function(){
+	$(this).addClass("red-zc").parent().siblings().find($infoActive).removeClass("red-zc");
+	$info.eq($(this).parent().index()).show().siblings().hide();
+});
+//-------------大图滚动------------------------
+			mui.init({
+				swipeBack:false //启用右滑关闭功能
+			});
+			var slider = mui("#slider");			
+				slider.slider({
+					interval: 1000
+				});
+//点击商品详情				
+$(".goods-zc").eq(0).on("tap",function(){
+	$("#wrap1").show().siblings().hide();
+	$navActive.eq(1).addClass("active-zc").parent().siblings().find($navActive).removeClass("active-zc");
+})
+//点击商品详情				
+$(".goods-zc").eq(1).on("tap",function(){
+	$("#wrap2").show().siblings().hide();
+	$navActive.eq(2).addClass("active-zc").parent().siblings().find($navActive).removeClass("active-zc");
+})
+//------------点击加入购物车------------
+var $shoppingClick=$(".shopping-3-zc");
+var $shoppingCart=$(".shopping-cart-zc");
+var $shoppingContent=$(".shopping-cart-content-zc");
+var $shoppingClose=$("#shopping-close-zc");
+var $shoppingSure = $(".shopping-footer-sure-zc>a");
+$shoppingClick.on("tap",function(){
+	$num.text("1");
+	$shoppingCart.show();
+	$shoppingContent.animate({
+		"bottom":"0px"
+	},200)
+});
+$shoppingClose.on("tap",function(){
+		$shoppingContent.animate({
+		"bottom":"-10rem"
+	},200,function(){
+		$shoppingCart.hide();
+	})
+})
+$shoppingSure.on("tap",function(){
+	alert("添加成功");
+	$shoppingContent.animate({
+		"bottom":"-10rem"
+	},200,function(){
+		$shoppingCart.hide();
+	})
+})
+var $shoppingBuyBtn=$("#buyBtn");
+// 立即购买
+$shoppingBuyBtn.on("tap",function(){
+	mui.openWindow({
+		url:'zmt-car.html',
+		id:'zmt-car',
+		show:{
+			duration:300
+		}
+	})
+})
+//标题购物车
+var $shoppingCar=$("#shopCar-zc");
+$shoppingCar.on("tap",function(){
+	mui.openWindow({
+		url:'zmt-car.html',
+		id:'zmt-car',
+		show:{
+			duration:300
+		}
+	})
+})
+
+//颜色分类
+var $colorActive=$(".shopping-color-zc span");
+$colorActive.on("tap",function(){
+$(this).addClass("springgreen-active").siblings().removeClass("springgreen-active");
+})
+//添加数量
+var $num=$("#shopCar-zc .num-zc");
+var $left=$("#left-btn");
+var $right=$("#right-btn");
+var $test=$("#test");
+var index=1;
+$left.on("tap",function(){
+	if(index==1){
+		return false;
+	}
+	index--;
+	$test.val(index);
+	$num.text($test.val());
+	
+})
+$right.on("tap",function(){
+	index++;
+	$test.val(index);
+	$num.text($test.val());
+})
+</script>
+</html>

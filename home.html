@@ -1,0 +1,457 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="css/home.css"/>
+		<link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+		<style type="text/css">
+			header{
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a id="headerMenu" class="mui-icon mui-action-menu mui-icon-bars" href="#offCanvasSide"></a>-->
+			<span id="QR-codes" class="mui-icon iconfont icon-saoyisao"></span>
+			<!--<a id="headerBack" href="index.html" class="mui-icon mui-icon-back" style="display: none;"></a>-->
+			<div id="headerFind" class="mui-input-row mui-search">
+			    <input type="search" class="mui-input-clear" placeholder="输入您要搜索的商品">
+			</div>
+			<h1 class="mui-title" style="display: none;">我的主页</h1>
+			<span id="voice" class="mui-icon mui-icon-mic"></span>
+			<button id='setting' class="mui-btn-link mui-icon mui-icon-gear" style="display: none;"></button>
+		</header>
+		<div class="mui-content">	
+		<!--大图滚动-->
+	    <div class="mui-slider" id="headerSlider">
+			<div class="mui-slider-group mui-slider-loop">
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	            	<img src="images/home/sp3.png"/>
+				</div>
+				<!--第一个内容区容器-->
+				<div class="mui-slider-item">
+					<img src="images/home/sp1.png"/>
+				</div>
+				<!--第二个内容区-->
+				<div class="mui-slider-item">
+					<img src="images/home/sp2.png"/>
+				</div>
+				<!--第三个内容区-->
+				<div class="mui-slider-item">
+					<img src="images/home/sp3.png"/>
+				</div>
+				<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+	            <div class="mui-slider-item mui-slider-item-duplicate">
+	            	<img src="images/home/sp1.png"/>
+				</div>
+			</div>
+			<!--小圆点-->
+			<div class="mui-slider-indicator">
+           	    <div class="mui-indicator mui-active"></div>
+           	    <div class="mui-indicator"></div>
+           	    <div class="mui-indicator"></div>
+           	</div>
+	    </div>
+	    
+	    <!--九宫格-->
+	    <ul id="ck-home-grid" class="mui-table-view mui-grid-view mui-grid-9">
+		    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+		        <a>
+		            <img src="images/home/icon1.png"/>
+		            <div class="mui-media-body">报单专区</div>
+		        </a>
+		    </li>
+		    <li id="shop" class="mui-table-view-cell mui-media mui-col-xs-3">
+		        <a>
+		        	<img src="images/home/icon2.png"/>
+		            <div class="mui-media-body">联盟商家</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+		        <a>
+		        	<img src="images/home/icon3.png"/>
+		            <div class="mui-media-body">猜你喜欢</div>
+		        </a>
+		    </li>
+		    <li class="mui-table-view-cell mui-media mui-col-xs-3">
+		        <a>
+		        	<img src="images/home/icon4.png"/>
+		            <div class="mui-media-body">热门商品</div>
+		        </a>
+		    </li>
+	    </ul>
+	    
+	    <!--利民公告-->
+	    <div id="ck-home-notice">
+	    	<span class="ck-color-red">利民公告：</span>
+	    	<div id="ck-notice-slider" class="mui-slider">
+	    		<div class="mui-slider-group  mui-slider-loop">
+		    	    <div class="mui-slider-item mui-slider-item-duplicate">
+		            	<a>可更改新聞內容2</a>
+					</div>
+		    	    <div class="mui-slider-item">
+		    	    	<a>可更改新聞內容1</a>
+		    	    </div>
+		    	    <div class="mui-slider-item">
+		    	    	<a>可更改新聞內容2</a>
+		    	    </div>
+		    	    <div class="mui-slider-item mui-slider-item-duplicate">
+		            	<a>可更改新聞內容1</a>
+					</div>
+	    		</div>
+	    	</div>
+	    	<span></span>
+	    	<a id="new-more" class="ck-a">更多</a>
+	    </div>
+	    
+	    <div id="commodityList">
+	    	<!--列表标题-->
+		    <ul class="ck-home-LsTit">
+		    	<li class="line"></li>
+		    	<li>精品任选</li>
+		    	<li class="line"></li>
+		    </ul>
+	
+		    <!--精品任选-->
+		    <ul id="ck-home-list1">
+	            <li><a><img src="images/home/list1.jpg"/></a></li>
+	            <li><a><img src="images/home/list2.jpg"/></a></li>
+	        </ul>
+	        
+	        <!--列表标题-->
+		    <ul class="ck-home-LsTit">
+		    	<li class="line"></li>
+		    	<li>热卖推荐</li>
+		    	<li class="line"></li>
+		    </ul>
+			
+		    <!--热卖推荐-->
+		    <div id="ck-home-list2">
+				<a class="list2-left">
+	    			<div>
+	    				<span>天天特惠</span>
+	    				<p>每天10点 爆款抢不停</p>
+	    			</div>    			
+	    			<img src="images/home/tb1.jpg" />
+				</a>
+				<a id="list2-right1" class="list2-right">
+	    			<div class="list-text">
+	    				<span>酒水饮料</span>
+	    				<p>炫彩预调鸡尾酒</p>
+	    			</div>  
+	    			<img src="images/home/tb2.jpg" />
+				</a>
+				<a id="list2-right2" class="list2-right">
+	    			<div class="list-text">
+	    				<span>酒水饮料</span>
+	    				<p>炫彩预调鸡尾酒</p>
+	    			</div>  			
+	    			<img src="images/home/tb2.jpg" />
+				</a>
+		    </div>
+		    
+		    <!--列表标题-->
+		    <ul class="ck-home-LsTit">
+		    	<li class="line"></li>
+		    	<li>每周上新</li>
+		    	<li class="line"></li>
+		    </ul>
+		    
+		    <!--每周上新-->
+		    <div id="ck-home-list3">
+		    	<div class="list3-top">
+		    		<a>
+		    			<div>
+		    				<span>电器数码</span>
+		    				<p>大屏就是小米max</p>
+		    			</div>  			
+		    			<img src="images/home/tb3.jpg" />
+					</a>
+					<a>
+		    			<div>
+		    				<span>电器数码</span>
+		    				<p>大屏就是小米max</p>
+		    			</div>  			
+		    			<img src="images/home/tb3.jpg" />
+					</a>
+		    	</div>
+			    <div class="list3-bottom">
+			    	<a>
+		    			<div class="list-text">
+		    				<span>一起玩耍</span>
+		    				<p>一款贱贱的ted熊</p>
+		    			</div>  			
+		    			<img src="images/home/tb4.jpg" />
+					</a>
+					<a>
+		    			<div class="list-text">
+		    				<span>电器数码</span>
+		    				<p>大屏就是小米max</p>
+		    			</div>  			
+		    			<img src="images/home/tb4.jpg" />
+					</a>
+					<a>
+		    			<div class="list-text">
+		    				<span>电器数码</span>
+		    				<p>大屏就是小米max</p>
+		    			</div>  			
+		    			<img src="images/home/tb4.jpg" />
+					</a>
+			    </div>
+		    </div>
+		    
+		    <!--列表标题-->
+		    <ul class="ck-home-LsTit">
+		    	<li class="line"></li>
+		    	<li>主题馆</li>
+		    	<li class="line"></li>
+		    </ul>
+		    
+		    <!--主题馆-->
+		    <ul id="ck-home-theme" class="mui-table-view mui-grid-view mui-grid-9">
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>汽车用品</span>
+		    				<p>双层车载置物箱</p>
+		    			</div>  			
+		    			<img src="images/home/tb5.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>手机数码</span>
+		    				<p>华为荣耀 畅玩5A</p>
+		    			</div>  			
+		    			<img src="images/home/tb6.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>美妆护肤</span>
+		    				<p>悦诗风吟绿茶套装</p>
+		    			</div>  			
+		    			<img src="images/home/tb7.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>居家生活</span>
+		    				<p>天然亮白低泡洗衣液 </p>
+		    			</div>  			
+		    			<img src="images/home/tb8.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>酒水饮料</span>
+		    				<p>卡帝乐鳄鱼船袜</p>
+		    			</div>  			
+		    			<img src="images/home/tb9.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>家用电器</span>
+		    				<p>美的智能电冰箱</p>
+		    			</div>  			
+		    			<img src="images/home/tb10.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>家居家纺</span>
+		    				<p>品质生活出众人生</p>
+		    			</div>  			
+		    			<img src="images/home/tb11.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>户外运动</span>
+		    				<p>男士休闲鞋透气潮鞋</p>
+		    			</div>  			
+		    			<img src="images/home/tb12.jpg" />
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-4 mui-col-sm-4">
+			        <a>
+			            <div class="list-text">
+		    				<span>高档箱包</span>
+		    				<p>泊泉雅蓝莓美肌精华</p>
+		    			</div>  			
+		    			<img src="images/home/tb13.jpg" />
+			        </a>
+			    </li>
+		    </ul>
+		    
+		    <!--列表标题-->
+		    <ul class="ck-home-LsTit">
+		    	<li class="line"></li>
+		    	<li>猜你喜欢</li>
+		    	<li class="line"></li>
+		    </ul>
+		    
+		    <!--猜你喜欢-->
+		    <ul id="ck-home-like" class="mui-table-view mui-grid-view mui-grid-9">
+			    <li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+			        <a>		
+		    			<img src="images/home/close1.jpg" />
+		    			<div class="list-text">
+		    				<span>休闲运动男女鞋春...</span>
+		    				<p class="ck-color-red">￥108.00</p>
+		    			</div> 
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+			        <a>		
+		    			<img src="images/home/close1.jpg" />
+		    			<div class="list-text">
+		    				<span>休闲运动男女鞋春...</span>
+		    				<p class="ck-color-red">￥108.00</p>
+		    			</div> 
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+			        <a>		
+		    			<img src="images/home/close1.jpg" />
+		    			<div class="list-text">
+		    				<span>休闲运动男女鞋春...</span>
+		    				<p class="ck-color-red">￥108.00</p>
+		    			</div> 
+			        </a>
+			    </li>
+			    <li class="mui-table-view-cell mui-col-xs-6 mui-col-sm-6">
+			        <a>		
+		    			<img src="images/home/close1.jpg" />
+		    			<div class="list-text">
+		    				<span>休闲运动男女鞋春...</span>
+		    				<p class="ck-color-red">￥108.00</p>
+		    			</div> 
+			        </a>
+			    </li>
+		    </ul>
+	    </div>
+	    
+	    
+	    
+	</div>
+	</body>
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript">
+	
+		//mui初始化
+		mui.init();
+		
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+			interval: 1500 //自动轮播周期，若为0则不自动播放，默认为0；
+		});
+		
+		//新闻点击
+		document.getElementById("new-more").addEventListener("tap",function(){
+		    mui.openWindow({
+			    url: 'news.html', 
+			    id:'news',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		// 报单 联盟 猜你喜欢 热门
+		var ckHomeGridArr = ["home-bill.html","home-shop.html","home-like.html","home-hot.html"]
+		mui("#ck-home-grid").on("tap","li",function(){
+		    mui.openWindow({
+			    url: 'shop.html', 
+			    id:'shop',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		// 大图滚动
+		mui("#headerSlider").on("tap","img",function(){
+		    mui.openWindow({
+			    url: 'slide.html', 
+			    id:'slide',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		// 精品任选
+		mui("#ck-home-list1").on("tap","li",function(){
+		    mui.openWindow({
+			    url: 'boutique.html', 
+			    id:'boutique.html',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		// 天天特惠	
+		mui("#ck-home-list2").on("tap","a",function(){
+		    mui.openWindow({
+			    url: 'boutique.html', 
+			    id:'boutique.html',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		//每周上新
+		mui("#ck-home-list3").on("tap","a",function(){
+		    mui.openWindow({
+			    url: 'slide.html', 
+			    id:'slide',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		//主题馆
+		mui("#ck-home-theme").on("tap","a",function(){
+		    mui.openWindow({
+			    url: 'classify_list1.html', 
+			    id:'classify_list1',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+		
+		//猜你喜欢
+		mui("#ck-home-like").on("tap","a",function(){
+		    mui.openWindow({
+			    url: 'classify_list2.html', 
+			    id:'classify_list2',
+			    show:{
+			    	duration:300
+			    }
+			});
+		});
+	</script>
+</html>

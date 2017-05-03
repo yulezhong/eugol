@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-car.css" />
+	</head>
+
+	<body>
+
+    <!-- 主页面标题 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">确认下单</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab zmt-car-bookSure-nav">
+		<p>
+			<span>合计：</span>
+			<span class="allprice"￥19.25</span>
+		</p>
+		<a>确认付款</a>
+    </nav>
+
+    <!-- 主页面内容容器 -->
+    <div class="mui-content">
+        <!--<div class="mui-input-row mui-checkbox mui-left">-->
+			<ul class="mui-table-view">
+			    <li class="mui-table-view-cell">
+			        <p class="mui-navigate-right" >
+			        	<span>刘晓心</span>
+			        	<span>13562021254</span><br/>
+			        	<span>[默认]</span>
+			        	<span>广州市天河区东圃时代</span>
+			        </p>
+			    </li>
+			</ul>
+        	
+            <ul class="zmt-car-bookSure-ul mui-table-view">	                    	
+			    <!--<li id="zmt-car-li">
+			    	<div class="mui-input-row mui-checkbox">
+						<inpu+t name="checkbox1" value="Item 1" type="checkbox" checked>
+					</div>
+		    		<img class="cloth" src="car/cloth.png" alt="" />
+		    		<p>
+		    			<span>夏季最新爆款蕾丝凉爽显瘦...</span>
+					  	<span>规格：1盒6片</span>
+					  	<span>￥29.5</span>
+		    		</p>
+					<p>x2</p>
+			    </li>	
+			    <li class="mui-table-view-cell zmt-car-bookSure-li">
+			    	运费：<span>￥10</span>
+			    </li>
+			    <li class="mui-table-view-cell zmt-car-bookSure-li">
+			    	备注：<input type="text" />
+			    </li>-->
+			</ul>
+			<!--<ul class="mui-table-view">
+			    
+			</ul>-->
+		<!--</div>-->
+		
+		
+    </div>
+	<!--支付页面-->
+		<div id="payPage">
+				<ul class="mui-table-view pageDetail">
+					<li class="mui-table-view-cell">
+						<span class="mui-icon mui-icon-close"></span>
+						付款详情
+						<span class="mui-icon mui-icon-help"></span>
+				    	
+				    </li>
+				    <li class="mui-table-view-cell">支付宝账号
+				    	<span>159****2087</span>
+				    </li>
+				    <li class="mui-table-view-cell">付款方式
+				    	<span class="mui-icon mui-icon-arrowright"></span>
+				    	<span >农业银行储蓄卡(1257)</span>
+				    </li>
+				    <li class="mui-table-view-cell">需付款
+				    	<span>100元</span>	
+				    <li>
+				    <div>
+				    	<button type="button" class="mui-btn mui-btn-primary">确认付款</button>
+				    </div>
+				</ul
+			
+		</div>	
+	</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+        //适配移动端 
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    
+//	mui.init()
+console.log("a")
+
+//跳转:
+$(".mui-table-view-cell>p:not(.mui-btn)").on("touchstart",function(){
+	mui.openWindow({
+		url:"lsc-address-compile.html",
+		id:"lsc-address-compile.html"
+	})
+})
+
+
+
+	
+	//接受数据
+mui.plusReady(function(){
+	var self = plus.webview.currentWebview();
+	
+	alert(self.clothNumber)
+	
+	for(var i=0;i<self.clothNumber;i++){
+		var $newLi=$("<li></li>");
+		$newLi.html(' <li id="zmt-car-li">\
+			    	<div class="mui-input-row mui-checkbox">\
+						<inpu+t name="checkbox1" value="Item 1" type="checkbox" checked>\
+					</div>\
+		    		<img class="cloth" src="images/car/cloth.png" alt="" />\
+		    		<p>\
+		    			<span>夏季最新爆款蕾丝凉爽显瘦...</span>\
+					  	<span>规格：1盒6片</span>\
+					  	<span>￥29.5</span>\
+		    		</p>\
+					<p>x2</p>\
+			    </li>');
+		$(".zmt-car-bookSure-ul").append($newLi);
+	}
+	
+	console.log(self.alltotal)
+	document.querySelector(".allprice").innerHTML = self.alltotal+10+"元";
+	$(".pageDetail li:nth-child(4) span").text(self.alltotal+10+"元");
+	
+});
+
+
+//点击立即支付
+$(".zmt-car-bookSure-nav a").on("touchstart",function(){
+	
+	
+	$("#payPage").css("display","block")
+	$(".pageDetail").animate({
+		bottom:0
+	})
+	console.log("支付")
+})
+
+//点击叉叉
+$(".pageDetail li:nth-child(1) span:first-child").on("touchstart",function(){
+	console.log("chacha")
+	$("#payPage").css("display","none")
+	$(".pageDetail").animate({
+		bottom:"-60%"
+	})
+	
+})
+
+
+		
+
+
+</script>
+</html>

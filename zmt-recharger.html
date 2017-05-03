@@ -1,0 +1,124 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-myself.css" />
+	</head>
+			<header class="mui-bar mui-bar-nav">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">账户充值页面</h1>
+			</header>
+		<!-- 主页面内容容器 -->
+            <div class="mui-content">
+                <div class="mui-scroll" id="zmt-money-bottom" >
+                    <!-- 主界面具体展示内容 -->
+                     <!--固定顶部-->
+                  <div class="zmt-intergral">
+                		<p>74.00</p>
+                		<p>账户余额(元)</p>
+                  </div>
+                  
+                  	<ul class="zmt-money-ul">
+					    <li><span>充值金额</span><input type="text" placeholder="请输入金额" /><span>元</span></li>
+					    <li><span>支付方式</span><input type="text"/><span class="mui-icon mui-icon-arrowdown"></span></li>
+					</ul>
+					       
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">充值规则</li>
+					    <li class="mui-table-view-cell" id="zmt-intergral-rule">
+					    	<p>1、可用金额按比例转入代用积分，实时到账</p>
+					    	<p>2.会员积分转账收入的积分，已禁止转入代用积分倍增。</p>
+					    	<p>3.可倍增积分具体请看"中心可倍增积分额值"</p>
+					    </li>
+					</ul>
+				
+					 <p class="zmt-intergral-sure">
+					 	<span>确定</span>
+					 	<span>取消</span>
+					</p>
+					
+                </div>
+
+            </div>
+
+	<body>
+
+	</body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+		 (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+		mui.init({
+			tap: true, //默认为true
+	   		doubletap: true, //默认为false
+			longtap: true, //默认为false
+			swipe: true, //默认为true
+			drag: true, //默认为true
+			hold:false,//默认为false，不监听
+			release:false//默认为false，不监听
+		});
+
+		//返回我的主页
+		var back=document.getElementsByClassName("mui-action-back")[0];
+			back.addEventListener("tap",function(){
+				mui.openWindow({
+				url:'lsc-myself.html',
+				id:'lsc-myself.html'
+			})
+		})
+			
+		var $sure1=jQuery(".zmt-intergral-sure>span:nth-of-type(1)");
+		var $sure2=jQuery(".zmt-intergral-sure>span:nth-of-type(2)");
+		
+		var $money=jQuery(".zmt-intergral>p:nth-of-type(1)");
+		
+		var reg=/^[0-9]+(.[0-9]{2})?$/;
+		
+		$sure2.on("tap",function(){
+			//执行mui封装好的窗口关闭逻辑；
+			mui.alert("已取消","提示")
+			$("input").val("")
+		})
+		$sure1.on("tap",function(){
+			  var btn = ["确定","取消"];
+			  mui.confirm('确认需要进行此操作？','提示',btn,function(e){
+			    if(e.index==0){
+			    	if($("input").val()==""){
+			    		mui.alert("请完善信息","提示");
+			    		return;
+			    	}
+			    	if(reg.test($("input").eq(0).val())){
+			    	
+			    		$money.text(eval($("input").eq(0).val()+'+'+$money.text()));
+			    		
+			    		$("input").val("")
+			    		
+			    		mui.alert("充值成功...","提示")
+			    	}else{
+			    	mui.alert("输入的信息格式不符，请重试输入...","提示");
+			    }    
+			}
+			  });	
+		})
+		</script>
+</html>

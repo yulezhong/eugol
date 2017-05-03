@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-myself.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">申请运营中心</h1>
+		</header>
+		
+		       
+            <!-- 主页面内容容器 -->
+            <div class="mui-content">
+                <div class="mui-scroll" id="zmt-money-bottom" >
+                    <!-- 主界面具体展示内容 -->
+                    
+                    <!--固定顶部-->
+                  <div class="zmt-m-top">
+                		<p><img src="images/myself/head.png"/></p>
+                		<div>
+                			<span>王小王</span>
+							<span>普通会员</span>
+                		</div>
+                  </div>
+
+                    
+                </div>
+
+                
+            </div>
+
+		
+	</body>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript">
+	        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+
+		mui.init({
+	    subpages:[{
+		      url:'zmt-angency.html',
+		      id:'zmt-angency.html',
+		      styles:{
+		        top:'45px',//mui标题栏默认高度为45px；
+		        bottom:'0px'//默认为0px，可不定义；
+		      }
+		    }],
+	    		tap: true, //默认为true
+		   		doubletap: true, //默认为false
+				longtap: true, //默认为false
+				swipe: true, //默认为true
+				drag: true, //默认为true
+				hold:false,//默认为false，不监听
+				release:false//默认为false，不监听
+		});
+ 		//返回键
+		var back=document.getElementsByClassName("mui-action-back")[0];
+			back.addEventListener("tap",function(){
+			mui.openWindow({
+					url:'lsc-myself.html',
+					id:'lsc-myself.html'
+				})
+			})
+	
+	
+</script>
+</html>

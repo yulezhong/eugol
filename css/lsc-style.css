@@ -1,0 +1,553 @@
+*{
+	margin:0;
+	padding:0;
+}
+ul li{
+	list-style: none;
+}
+#setting{
+	position: absolute;
+	right: 0.5rem;
+	padding-top: 0;
+}
+html,body{
+	width:100%;
+}
+.lsc-wrap{
+	width:100%;
+	height:100%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    margin-bottom: 0.3rem;
+}
+.mui-action-back{
+	color:#FFFFFF;
+}
+/*我的页面1 lsc-myself.html*/
+.lsc-signIn{
+	width:100%;
+	height:100%;
+	background-color:rgba(37,203,131,1);
+	flex:1;
+	-webkit-box-flex:1;
+}
+/*<!--顶部用户信息-->*/
+.lsc-signIn-container{
+	width:100%;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+}
+.lsc-m-top{
+	flex:1;
+	-webkit-box-flex:1;
+	height: 3rem;
+	background-color:#26CA83 ;
+	text-align: center;
+	color: white;
+}
+
+.lsc-m-top p{
+	margin-top: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	display: inline-block;
+	background-color: white;
+	border-radius: 100%;
+	overflow: hidden;
+	text-align: center;
+	font-size:0.3rem;
+}
+.lsc-m-top p>img{
+	width:1rem;
+	height:1rem;
+}
+.lsc-m-top span:nth-of-type(1){
+	border-right: 1px solid white;
+	padding-right: 6px;
+	font-size:0.3rem;
+}
+/*返回a标签字体样式*/
+.lsc-back{
+	display: block;
+	flex:1;
+	-webkit-box-flex:1;
+	font-size:0.4rem;
+	color:white;
+}
+.lsc-signIn-message{
+	flex:2;
+	-webkit-box-flex:2;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height:2.5rem;
+
+    
+}
+/*<!--用户信息与签到按钮-->*/
+.lsc-signIn-left{
+	flex:1;
+	-webkit-box-flex:1;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+   justify-content: flex-end;
+    align-items: center;
+}
+.lsc-signIn-icon{
+	width:1.5rem;
+	height:1.5rem;
+	border-radius: 100%;
+	margin-right:0.2rem;
+}
+.lsc-signIn-left p{
+	flex:1;
+	-webkit-box-flex:1;
+	margin-bottom:0;
+	color:rgba(255,255,254,1);
+}
+.lsc-signIn-btn{
+	flex:1;
+	-webkit-box-flex:1;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+   	justify-content: center;
+    align-items: center;
+	
+}
+.lsc-signIn-btn>button{
+	color:rgba(37,203,131,1);
+}
+/*<!--用户积分，余额信息栏-->*/
+.lsc-container{
+	width:100%;
+	font-size:0.3rem;
+	flex:1;
+	-webkit-box-flex:1;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+}
+.lsc-money-container{
+	flex:1;
+	-webkit-box-flex:1;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size:0.3rem;
+}
+.lsc-account-balance{
+	flex:1;
+	-webkit-box-flex:1;
+	border: 1px solid rgba(211,211,211,1);
+}
+.lsc-account-available{
+	flex:1;
+	-webkit-box-flex:1;
+	border: 1px solid rgba(211,211,211,1);
+}
+.lsc-account-inactive{
+	flex:1;
+	-webkit-box-flex:1;
+	border: 1px solid rgba(211,211,211,1);
+}
+.lsc-account-ticket{
+	flex:1;
+	-webkit-box-flex:1;
+	border: 1px solid rgba(211,211,211,1);
+}
+.lsc-account-increase{
+	flex:1;
+	-webkit-box-flex:1;
+	border: 1px solid rgba(211,211,211,1);
+}
+.lsc-container{
+	margin-top:0.2rem;
+}
+/*用户的积分，余额信息栏文字*/
+.lsc-container .lsc-center{
+	text-align: center;
+}
+.lsc-container .lsc-center p:first-child{
+	color:rgba(255,0,0,1);
+}
+.lsc-container .lsc-center p:last-child{
+	color:rgba(0,0,0,1);
+}
+/*<!--用户设置相关功能切换-->*/
+.lsc-container .mui-table-view{
+	width:100%;
+	margin:0 auto;
+}
+.lsc-btn-success{
+	margin-top:0.2rem;
+	height:1rem;
+	font-size:0.3rem;
+}
+
+/*我的页面2 lsc-manage.html*/
+.lsc-return-container>ul>li:first-child{
+	background-color:rgba(37,203,131,1);
+}
+.lsc-wrap .lsc-two-container:not(:last-child){
+	flex: 1;
+	-webkit-box-flex:1;
+}
+.lsc-two-container{
+	font-size:0.3rem;
+	margin-top:0.2rem;
+}
+.lsc-wrap .lsc-two-container:last-child{
+	flex: 5;
+	-webkit-box-flex:5;
+}
+.lsc-btn{
+	height:0.8rem;
+	position:relative;
+}
+.mui-btn-success{
+	width:3rem;
+	display: block;
+	position:absolute;
+	margin:auto;
+	left:0;
+	top:0;
+	right:0;
+	bottom;
+	background-color:rgba(37,203,131,1);
+}
+
+
+/*
+ * 修改密码页面lsc-change-password.html
+ * 修改用户名页面 lsc-edit-name.html
+ */
+.lsc-change-container .mui-icon-arrowleft{
+	height: 0.8rem;
+	line-height: 0.8rem;
+	color: #FFFFFF;
+	background-color: #26CA83;
+	font-size:0.3rem;
+}
+.lsc-user-container{
+	flex: 1;
+	-webkit-box-flex:1;
+}
+.lsc-user-container form div {
+	height:1.2rem;
+	margin-top:0.2rem;
+}
+.lsc-user-container form div .lsc-input{
+	height:1.2rem;
+	font-size:0.3rem;
+}
+.mui-input-row .mui-input-password~.mui-icon-eye{
+	line-height: 1rem;
+}
+.lsc-edit-container input{
+	height:100%;
+}
+.lsc-form{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size:0.3rem;
+}
+.mui-button-row{
+	flex: 1;
+	-webkit-box-flex:1;
+	
+}
+/*btn按钮样式*/
+.lsc-btn-warning{
+	width:100%;
+	height:100%;
+	font-size:0.3rem;
+	background-color:rgba(255,140,34,1);
+}
+.lsc-btn-cancel{
+	width:100%;
+	height:100%;
+	font-size:0.3rem;
+	background-color:rgba(38,202,131,1);
+}
+
+
+/*lsc-apply-for-alliance.html*/
+/*添加法人身份证，添加营业执照*/
+.lsc-alliance-container:nth-of-type(1){
+	margin-top:0.2rem;
+	flex:1;
+	-webkit-box-flex: 1;
+}
+.lsc-alliance-container:nth-of-type(2){
+	flex:2;
+	-webkit-box-flex: 2;
+	flex-direction:column;
+}
+.lsc-alliance-container{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin-bottom:0.2rem;
+    font-size:0.3rem;
+}
+.lsc-account-alliance{
+	flex: 1;
+	-webkit-box-flex:1;
+}
+.lsc-account-alliance .lsc-center{
+	width:2.5rem;
+	height:2.5rem;
+	margin:0 auto;
+	border:1px solid lightgray;
+	background-color: rgba(255,255,254,1);
+	text-align: center;
+}
+.lsc-account-alliance .lsc-center p:nth-of-type(1){
+	padding-top:0.5rem;
+}
+/*填写信息区*/
+.mui-input-group{
+	flex: 3;
+	-webkit-box-flex:3;
+	margin-bottom:0.2rem;
+}
+.lsc-input-group{
+	flex: 1;
+	-webkit-box-flex:1;
+	font-size:0.3rem;
+	margin:auto 0.2rem;
+}
+.lsc-alliance-container .mui-input-row{
+	height:0.8rem;
+}
+.lsc-alliance-container .mui-input-row input{
+	line-height:0.8rem;
+	font-size:0.3rem;
+}
+.mui-btn-primary{
+	width:100%;	
+	height:0.8rem;
+	margin-top:0.2rem;
+	background-color:#26CA83;
+	border:none;
+}
+
+
+/*用户账单 lsc-user-bill.html*/
+.lsc-bill-wrap{
+	font-size:0.3rem;
+}
+/*bill头部标题*/
+.lsc-bill-header{
+	background-color:rgba(37,203,131,1);
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+.lsc-bill-header span{
+	line-height: 0.7rem;
+	color:rgba(255,255,254,1);
+	margin:auto 0.2rem;
+}
+.lsc-bill-header span:nth-of-type(1){
+	flex: 2;
+	-webkit-box-flex:2;
+}
+.lsc-bill-header span:nth-of-type(2){
+	flex: 1;
+	-webkit-box-flex:1;
+}
+.lsc-bill-header span:nth-of-type(3){
+	flex: 1;
+	-webkit-box-flex:1;
+}
+/*账单明细*/
+.lsc-bill-detail-container{
+	flex: 8;
+	-webkit-box-flex:8;
+	margin-bottom:0.2rem;
+	background-color:rgba(255,255,254,1);
+}
+/*账户支出与金额*/
+.lsc-bill-detail{
+	height:0.8rem;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    margin:auto 0.2rem;
+}
+.lsc-bill-detail span{
+	flex: 2;
+	-webkit-box-flex:2;
+	text-align: center;
+	line-height: 1rem;
+}
+.lsc-bill-detail span:nth-of-type(3){
+	color:rgba(255,0,0,1)
+}
+/*账户支出出处*/
+.lsc-bill-quarry{
+	height:2rem;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    margin:auto 0.2rem;
+    border-bottom: 1px solid lightgray;
+}
+.lsc-bill-quarry div{
+	flex: 1;
+	-webkit-box-flex:1;
+}
+.lsc-bill-quarry div span{
+	line-height: 0.6rem;
+}
+/*账户余额时间*/
+.lsc-remaining-sum{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    height:1rem;
+    margin:auto 0.2rem;
+}
+.lsc-remaining-sum span:nth-of-type(1){
+	flex: 2;
+	-webkit-box-flex:2;
+	line-height: 1rem;
+}
+.lsc-remaining-sum>span:nth-of-type(2){
+	flex: 1;
+	-webkit-box-flex:1;
+	color:rgba(255,0,0,1);
+}
+
+/*待付订单 lsc-total-bill.html*/
+.lsc-total-bill-header{
+	height:0.8rem;
+	background-color:rgba(37,203,131,1);
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    fon-size:0.3rem;
+}
+.lsc-total-bill-header>div{
+	height:100%;
+	flex: 1;
+	-webkit-box-flex:1;
+	color:rgba(255,255,254,1);
+	font-size:0.3rem;
+	text-align: center;
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+   	flex-direction:column;
+}
+.lsc-total-bill-header>div>span:nth-of-type(1){
+	line-height: 0.8rem;
+}
+.lsc-active{
+	width:0.5rem;
+	border-bottom:0.05rem solid rgba(255,128,0,1);
+	margin: 0 auto;
+}
+/*<!--待付商品-->*/
+.lsc-obligation-container{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction:column;
+    background-color:rgba(255,255,254,1);
+    margin-top:0.2rem;
+}
+/*订单号*/
+.lsc-order-number{
+    margin:0.2rem 0.2rem;
+    border-bottom:0.02rem solid lightgray;
+    font-size:0.3rem;
+}
+.lsc-order-number span:nth-of-type(3){
+	border-radius:0.1rem;
+	font-size:0.3rem;
+	color:rgba(255,255,254,1);
+	background-color:rgba(37,203,131,1);
+}
+/*订单商品信息*/
+/*商品信息*/
+.lsc-indent-subcontent{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin:0 0.2rem;
+    border-bottom:0.02rem solid lightgray;
+    font-size:0.3rem;
+}
+.lsc-indent-content div:nth-of-type(1) img{
+	width:1.5rem;
+	height:1.5rem;
+}
+.lsc-indent-content div:nth-of-type(2){
+	font-size:0.2rem;
+	font-size:0.2rem;
+}
+.lsc-indent-content div:nth-of-type(2)>div{
+	line-height: 0.387rem;
+	font-size:0.2rem;
+}
+.lsc-indent-content div:nth-of-type(2)>div:last-child{
+	margin-top:0.3rem;
+	font-size:0.2rem;
+}
+.lsc-indent-content div:nth-of-type(2)>div>span:last-child{
+	float: right;
+	font-size:0.2rem;
+}
+/*立即付款按钮*/
+.lsc-pay-btn{
+	overflow: hidden;
+}
+.lsc-pay-btn>button{
+	float: right;
+	margin:0 0.2rem;
+	background-color:rgba(37,203,131,1);
+	color:#FFFFFF;
+	font-size:0.3rem;
+}
+/*更多*/
+.lsc-even-more{
+	margin:0.2rem auto;
+	text-align: center;
+}
+.lsc-even-more>button{
+	width:1.5rem;
+	height:0.7rem;
+	background-color:rgba(37,203,131,1);
+	color:#FFFFFF;
+	font-size:0.3rem;
+}
+

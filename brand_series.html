@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clear:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			ul li {
+				list-style: none;
+			}
+			.mui-bar .mui-icon{
+				font-size: 20px;
+			}
+			.mui-icon{
+				font-size: 0.4rem;
+			}
+			.yu-series h1 {
+				text-align: left;
+				color: #25cb83;
+				height: 100%;
+			}
+			
+			.yu-series .yu-icon {
+				color: #25cb83;
+			}
+			
+			/*------series-tab------*/
+			
+			.yu-series-tab{
+				background: #FFFFFF;
+			}
+		
+			.yu-series-tab ul li a{
+				color: #666666;
+			}
+			#yu-ipt-margin{
+				margin-bottom: 0;
+				height: 100%;
+				outline: none;
+				border: none;
+				font-size: 0.3rem;
+			}
+			
+			#yu-icon-search{
+				position: absolute;
+				left: 1rem;
+    			top: 0.3rem;
+			}
+			.yu-tab-btn li{
+				float: left;
+				width: 25%;
+				text-align: center;
+				font-size: 0.3rem;
+				height: 0.9rem;
+				line-height: 1rem;				
+				border-right: 1px solid #dcdcdc;
+				border-bottom: 1px solid #dcdcdc;
+			}
+			
+			.yu-series-brands{
+				padding: 0.2rem;
+				
+			}
+			
+			.yu-series-brands li{
+				overflow: hidden;
+				border-bottom:  1px solid #dcdcdc;
+				padding-bottom: 0.15rem;
+				padding-top: 0.15rem;
+				height: 2rem;
+			}
+			
+			.yu-series-brands div{
+				float: left;
+			}
+			
+			.yu-series-brands div img{
+				width: 100%;
+			}
+			.yu-brand-pic{
+				width: 30%;	
+			}
+			
+			.yu-brand-adress{
+				margin-top: 0.25rem;
+				margin-left: 0.3rem;			
+			}
+			.yu-brand-adress p{
+				margin-bottom: 0;
+				line-height: 0.4rem;
+				font-size: 0.26rem;
+			}
+			.yu-series-brands .yu-brand-name{
+				font-size: 0.35rem;
+				color: #343434;
+			}
+			#clear-border{
+				border-bottom: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--页面标题-->
+			<header class="mui-bar mui-bar-nav yu-series">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left yu-icon"></a>
+				<h1 class="mui-title">商家分类</h1>
+			</header>
+			
+			<div class="mui-content">
+
+				<!--分类tab切换-->
+				<div class="yu-series-tab">
+					<!--按钮-->
+					<ul class="clear yu-tab-btn">
+						<li>
+							<a>
+								<span>美食</span>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>全城</span>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>默认排序</span>
+								<span class="mui-icon mui-icon-arrowdown"></span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="mui-input-row mui-search" style="height: 99%;">
+									<input type="text" placeholder="搜索" id="yu-ipt-margin">
+									<span class="mui-icon mui-icon-search" id="yu-icon-search"></span>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<!--品牌商家-->
+					<ul class="yu-series-brands clear">
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/back_home.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/cantanese.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/han.png" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/fish.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/coffee.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/koria.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/honor.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+						<li>
+							<a>
+								<div class="yu-brand-pic">
+									<img src="images/brand_series/western.jpg" alt="" />
+								</div>
+								<div class="yu-brand-adress">
+									<p class="yu-brand-name">麦当劳麦乐送(高薪合家福点)</p>
+									<p>麦辣鸡腿堡套餐,建议单人使用</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+		mui.init()
+		
+	</script>
+</html>

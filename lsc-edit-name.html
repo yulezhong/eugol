@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/lsc-style.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+	    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left lsc-back"></a>
+	    	<h1 class="mui-title">修改姓名页面</h1>
+		</header>
+	
+	    <article class="lsc-wrap mui-content">
+	  		<!--顶部用户信息-->
+		    <section class="lsc-m-top">
+        		<p><img src="images/myself/head.png"/></p>
+        		<div>
+        			<span>王小王</span>
+					<span>普通会员</span>
+        		</div>
+	       </section>
+		   <!--修改密码-->
+		  	<section class="lsc-user-container">
+		  		<form>
+				    <div class="mui-input-row lsc-edit-container">
+				         <input type="text" class="mui-input-clear lsc-input" placeholder="长度为5至10个汉字">
+				    </div>
+		  		</form>
+				<form class="lsc-form">
+				    <div class="mui-button-row">
+				    	<button type="button" class="mui-btn lsc-btn-warning">确定</button>
+				    </div>
+				    <div class="mui-button-row">
+				    	<button type="button" class="mui-btn lsc-btn-cancel">取消</button>
+				    </div>
+				</form>
+		  	</section>
+	  	</article>
+	</body>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script type="text/javascript">
+		//适配移动端
+	  	(function (doc, win) {
+		    var docEl = doc.documentElement,
+		        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		        recalc = function(){
+		            var clientWidth = docEl.clientWidth;
+		            if(!clientWidth) return;
+		            if(clientWidth>=750){
+		                docEl.style.fontSize = '100px';
+		            }else{
+		                docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+		            }
+		        };
+			    if (!doc.addEventListener) return;
+			    win.addEventListener(resizeEvt, recalc, false);
+			    doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+		
+		mui.init({
+			tap: true, //默认为true
+	   		doubletap: true, //默认为false
+			longtap: true, //默认为false
+			swipe: true, //默认为true
+			drag: true, //默认为true
+			hold:false,//默认为false，不监听
+			release:false//默认为false，不监听
+		});
+
+		//返回键
+		var back=document.getElementsByClassName("mui-action-back")[0];
+			back.addEventListener("tap",function(){
+				mui.openWindow({
+				url:'lsc-myself.html',
+				id:'lsc-myself.html'
+			})
+		})
+		//确定按钮
+		var $warnBtn=$(".lsc-btn-warning:nth-child(1)");
+		//input标签
+		var $ipt=$(".lsc-input:nth-child(1)");
+		
+		var $editName=$(".lsc-m-top>div>span:nth-of-type(1)");
+		
+		$warnBtn.on("tap",function(){
+			
+			if($ipt.val()==""){
+				mui.alert("请填入信息不能为空","提示");
+				return;
+			}else{
+				var btn=["是","否"]
+					mui.confirm("是否要进行此操作...","提示",btn,function(e){
+					if(e.index==0){
+						$editName.text($ipt.val());
+						mui.alert("修改用户名成功","提示");
+						$ipt.val("");
+					}else{
+						mui.alert("已取消修改户名","提示");
+						$ipt.val("");
+					}
+					
+				})
+				
+			}
+			
+		})
+		
+		//取消按钮
+		var $cancelBtn=$(".lsc-btn-cancel:nth-of-type(1)");
+		$cancelBtn.on("tap",function(){
+			var btn=["是","否"]
+				mui.confirm("是否要取消修改用户名操作...","提示",btn,function(e){
+					if(e.index==0){
+						mui.alert("已取消修改户名","提示");
+						$ipt.val("");
+					}
+				})
+		})
+
+	</script>
+</html>

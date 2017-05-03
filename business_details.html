@@ -1,0 +1,357 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clear:after{
+				content: "";
+				display: block;
+				clear: both;
+			}
+		
+			ul li{
+				list-style: none;
+			}
+			
+			.mui-bar .mui-icon{
+				font-size: 20px;
+			}
+			.mui-icon{
+				font-size: 0.5rem;
+			}
+			.yu-business-title h1{
+				text-align: left;
+				color: #25cb83;
+			}
+			.yu-business-title .yu-icon{
+				color: #25cb83;	
+			}
+			
+			/*------brand-detail------*/
+			
+			.yu-brand-details{
+				padding: 0.38rem;
+				overflow: hidden;
+				border-bottom: 1px solid #dcdcdc;
+				background: #FFFFFF;
+			}
+			
+			.yu-brand-details div{
+				float: left;
+				width: 18%;
+				padding-top: 0.3rem;
+			}
+			
+			.yu-brand-details div img{
+				width: 100%;
+			}
+			
+			.yu-brand-details ul{
+				float: left;
+				width: 82%;
+				margin: 0;
+				padding-top: 0.2rem;
+				padding-left: 0.35rem;
+			}
+			
+			.yu-icon-mobile{
+				color: #00cc7d;
+			}
+			
+			.yu-detail-font{
+				font-size: 0.3rem;
+				color: #999999;
+			}
+			.yu-brand-font a{
+				font-size: 0.4rem;
+				color: #333333;
+			}
+			
+			
+			/*------end------*/
+			
+			/*------活动公告------*/
+			.yu-notice p{
+				padding-left: 0.1rem;
+				padding-right: 0.1rem;
+				margin-bottom: 0;
+				height: 0.9rem;
+				line-height: 0.9rem;
+				border-bottom: 1px solid #dcdcdc;
+				border-top: 1px solid #dcdcdc;
+				font-size: 0.4rem;
+			}
+			
+			.yu-notice ul{
+				margin: 0;
+				padding-left: 0.15rem;
+				padding-right: 0.15rem;
+				padding-top: 0.3rem;
+				padding-bottom: 0.3rem;
+				border-bottom: 1px solid #dcdcdc;
+				background: #FFFFFF;
+			}
+			
+			.yu-notice ul li{
+				margin-bottom: 0.3rem;
+				line-height: 0.5rem;
+				font-size: 0.28rem;
+				color: #999999;
+			}
+			/*------end------*/
+			
+			/*------商品评价------*/
+			.yu-content ul li img{
+				width: 100%;
+			}
+			
+			.yu-feedback-btn{
+				margin-top: 0.2rem;
+			}
+			
+			.yu-feedback-btn li{
+				float: left;
+				width: 50%;
+				text-align: center;
+				border-bottom:  1px solid #dcdcdc;
+				border-top:  1px solid #dcdcdc;
+				height:0.9rem;
+				line-height: 0.9rem;
+				font-size: 0.14rem;
+			}
+			
+			.yu-feedback-btn li a{
+				display: block;
+				font-size: 0.28rem;
+				width: 100%;
+				height: 100%;
+				color: #707070;
+			}
+			
+			.yu-plus-border{
+				border-right: 1px solid #dcdcdc;		
+			}
+			.yu-food-pic{
+				float: left;
+				width: 100%;
+			}
+			.yu-food-pic div{
+				float: left;
+				width: 12%;	
+			}
+			
+			.yu-food-pic div img{
+				width: 100%;
+				border-radius: 50%;
+			}
+			
+			.yu-food-pic p{
+				float: left;
+				width: 88%;
+				padding-left: 0.1rem;
+				padding-right: 0.1rem;
+				margin-top: 0.25rem;
+			}
+
+			
+			.yu-date{
+				float:right;
+			}
+			
+			.yu-customer-feedback>div{
+				padding: 0.2rem;
+			}
+			
+			.feedback-person p{
+				padding-left: 13.3%;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<!--页面标题-->
+			<header class="mui-bar mui-bar-nav yu-business-title">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left yu-icon"></a>
+			    <h1 class="mui-title">商家详情</h1>
+			</header>
+			
+			<div class="mui-content">
+			    <!--商家信息-->
+				<div class="yu-brand-details">
+					<div>
+						<img src="images/business_detail1/mcdonald.jpg" alt="" />
+					</div>
+					<ul>
+						<li class="yu-brand-font">
+							<a>麦当劳麦乐送</a>
+						</li>
+						<li>
+							<a>
+								<span class="mui-icon mui-icon-phone yu-icon-mobile"></span>
+								<span class="yu-detail-font">020-66666666</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span class="mui-icon mui-icon-location yu-icon-mobile"></span>
+								<span class="yu-detail-font">广州市天河区中山大道448号</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<!--活动公告-->
+				<div class="yu-notice">
+					<p>活动公告</p>
+					<ul>
+						<li>本店全新升级,菜品调整,增加了烧烤等美食</li>
+						<li>如需锅底,需到店另付现金即可,营养骨汤滋补锅6元一份,香辣鸳鸯锅12元一份,每桌仅限一份锅底,建议点锅底享受更多优惠</li>
+						<li>部分菜品因时令原因有所不同</li>
+					</ul>
+				</div>		
+				<!--商品介绍及评价-->
+				<div class="feedback">
+					<ul class="yu-feedback-btn clear">
+						<li class="yu-plus-border">
+							<a class="yu-bottom" style="border-bottom: 1px solid #00cc7d ;color:#00cc7d;">商品介绍</a>
+						</li>
+						<li>
+							<a>商品评价</a>
+						</li>
+					</ul>
+					<div class="yu-content">
+						<ul class="yu-brand-pic">
+							<li>
+								<img src="images/business_detail1/brand-pic.jpg" alt="" />
+							</li>
+							<li>
+								<img src="images/business_detail1/brand-pic.jpg" alt="" />
+							</li>
+							<li>
+								<img src="images/business_detail1/brand-pic.jpg" alt="" />
+							</li>
+							<li>
+								<img src="images/business_detail1/brand-pic.jpg" alt="" />
+							</li>
+							<li>
+								<img src="images/business_detail1/brand-pic.jpg" alt="" />
+							</li>
+						</ul>
+						<div class="yu-customer-feedback"  style="display: none;">
+							<div class="clear">
+								<div class="yu-food-pic clear">
+									<div>
+										<img src="images/business_detail1/food-pic.jpg" alt="" />
+									</div>
+									<p>
+										<span>疯狂小田</span>
+										<span class="yu-date">2016-07-26</span>
+									</p>
+								</div>
+								<div class="feedback-person">								
+									<p>味道正宗,量足!关键老板服务还很好!赞一个</p>
+								</div>
+							</div>
+							<div class="clear">
+								<div class="yu-food-pic clear">
+									<div>
+										<img src="images/business_detail1/food-pic.jpg" alt="" />
+									</div>
+									<p>
+										<span>疯狂小田</span>
+										<span class="yu-date">2016-07-26</span>
+									</p>
+								</div>
+								<div class="feedback-person">								
+									<p>味道正宗,量足!关键老板服务还很好!赞一个</p>
+								</div>
+							</div>
+							<div class="clear">
+								<div class="yu-food-pic clear">
+									<div>
+										<img src="images/business_detail1/food-pic.jpg" alt="" />
+									</div>
+									<p>
+										<span>疯狂小田</span>
+										<span class="yu-date">2016-07-26</span>
+									</p>
+								</div>
+								<div class="feedback-person">								
+									<p>味道正宗,量足!关键老板服务还很好!赞一个</p>
+								</div>
+							</div>
+							<div class="clear">
+								<div class="yu-food-pic clear">
+									<div>
+										<img src="images/business_detail1/food-pic.jpg" alt="" />
+									</div>
+									<p>
+										<span>疯狂小田</span>
+										<span class="yu-date">2016-07-26</span>
+									</p>
+								</div>
+								<div class="feedback-person">								
+									<p>味道正宗,量足!关键老板服务还很好!赞一个</p>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript">
+			mui.init();
+			
+			//tab切换
+			
+			//获取相关元素
+
+			var btns =document.querySelectorAll(".yu-feedback-btn li a");
+			var brand = document.querySelector(".yu-brand-pic");
+			var feedback = document.querySelector(".yu-customer-feedback");
+			
+			
+			//添加点击事件
+			for(var i = 0; i< btns.length;i++){
+				btns[i].onclick = function(){
+					for(var j= 0;j<btns.length;j++){
+						btns[j].style.borderBottom = "";
+						btns[j].style.color = "";
+					}
+					if(this.innerText == "商品介绍"){
+						brand.style.display = "block";
+						feedback.style.display = "none";
+						this.style.borderBottom = "1px solid #00cc7d";
+						this.style.color = "#00cc7d";
+
+
+					}
+					if(this.innerText == "商品评价"){
+						brand.style.display = "none";
+						feedback.style.display = "block";
+						this.style.borderBottom = "1px solid #00cc7d";
+
+						this.style.color = "#00cc7d";
+
+					}
+					
+				}
+			}
+			
+			
+	</script>
+</html>

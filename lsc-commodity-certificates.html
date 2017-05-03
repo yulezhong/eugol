@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+	
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-myself.css" />
+	</head>
+			
+	<body>
+			<header class="mui-bar mui-bar-nav">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">商品券管理页面</h1>
+			</header>
+		<!-- 主页面内容容器 -->
+            <div class="mui-content">
+                <div class="mui-scroll" id="zmt-money-bottom" >
+                    <!-- 主界面具体展示内容 -->
+                     <!--固定顶部-->
+                  	<div class="zmt-intergral">
+                		<p>86</p>
+                		<p>我的商品券</p>
+                  	</div>
+                  
+                 	<ul class="zmt-money-ul">
+					    <li><span>使用数量</span><input type="text" placeholder="请输入使用的商品券数量" /><span>券</span></li>
+					</ul>
+					
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">商品券管理规则</li>
+					    <li class="mui-table-view-cell" id="zmt-intergral-rule">
+					    	<p>1、商品券金额按比例使用</p>
+					    	<p>2.商品券过期不能在使用。</p>
+					    	<p>3.商品券最终解析权归商品券发起人所有"</p>
+					    </li>
+					</ul>
+					       
+				
+					 <div class="zmt-intergral-sure">
+					 	<span>确定</span>
+					 	<span>取消</span>
+					</div>
+                </div>
+
+            </div>
+	</body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+		 (function (doc, win) {
+            var docEl = doc.documentElement,
+		                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+		                recalc = function(){
+		                    var clientWidth = docEl.clientWidth;
+		                    if(!clientWidth) return;
+		                    if(clientWidth>=750){
+		                        docEl.style.fontSize = '100px';
+		                    }else{
+		                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+		                    }
+		                };
+		
+		            if (!doc.addEventListener) return;
+		            win.addEventListener(resizeEvt, recalc, false);
+		            doc.addEventListener('DOMContentLoaded', recalc, false);
+		    })(document, window);
+			mui.init({
+				 gestureConfig:{
+					   tap: true, //默认为true
+					   doubletap: true, //默认为false
+					   longtap: true, //默认为false
+					   swipe: true, //默认为true
+					   drag: true, //默认为true
+					   hold:false,//默认为false，不监听
+					   release:false//默认为false，不监听
+					  }
+			});
+			//返回键
+			var back=document.getElementsByClassName("mui-action-back")[0];
+				back.addEventListener("tap",function(){
+					mui.openWindow({
+					url:'lsc-myself.html',
+					id:'lsc-myself.html'
+				})
+			})
+				var $sure1=jQuery(".zmt-intergral-sure>span:nth-of-type(1)");
+		var $sure2=jQuery(".zmt-intergral-sure>span:nth-of-type(2)");
+		
+		var $money=jQuery(".zmt-intergral>p:nth-of-type(1)");
+		
+		var reg=/^[0-9]*$/;
+		
+		$sure2.on("tap",function(){
+			//执行mui封装好的窗口关闭逻辑；
+			mui.alert("已取消","提示")
+			$("input").val("")
+		})
+		$sure1.on("tap",function(){
+			  var btn = ["确定","取消"];
+			  mui.confirm('确认需要进行此操作？','提示',btn,function(e){
+			    if(e.index==0){
+			    	if($("input").val()==""){
+			    		mui.alert("请完善信息","提示");
+			    		return;
+			    	}
+			    	if($("input").eq(0).val().replace(reg)){
+			    		mui.alert("输入的信息格式不符，请重试输入...","提示");
+			    		$("input").val("")
+			    	}else{
+			    	mui.alert("已提交上系统...","提示")
+			    }    
+			}
+			  });	
+		})
+		</script>
+</html>

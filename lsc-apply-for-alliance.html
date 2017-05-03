@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/lsc-style.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left lsc-back"></a>
+	    <h1 class="mui-title">商家加盟页面</h1>
+	</header>
+
+	    <article class="lsc-wrap mui-content " >
+	    	<div class="mui-scroll">
+			        <!-- 主界面具体展示内容 -->
+					 <!--固定顶部-->
+			      	<div class="lsc-m-top">
+			    		<p><img src="images/myself/head.png"/></p>
+			    		<div>
+			    			<span>王小王</span>
+							<span>普通会员</span>
+			    		</div>
+			      	</div>
+				    <!--账户信息栏-->
+				  	<section class="lsc-alliance-container">
+				  		<div class="lsc-account-alliance">
+				  			<div class="lsc-center">
+				  				<p class="mui-icon mui-icon-plus"></p>
+				  				<p>添加营业执照</p>
+				  			</div>
+				  		</div>
+				  		<div class="lsc-account-alliance">
+				  			<div class="lsc-center">
+				  				<p class="mui-icon mui-icon-plus"></p>
+				  				<p>添加法人身份证</p>
+				  			</div>
+				  		</div>
+				  	</section>
+				  	<!--相关功能切换-->
+				  	<section class="lsc-alliance-container">
+						<form class="mui-input-group">
+						    <div class="mui-input-row">
+						        <label for="name">商家名称：</label>
+						    	<input id="name" type="text" name="name">
+						    </div>
+						    <div class="mui-input-row">
+						        <label for="address">商家地址：</label>
+						    	<input id="address" type="text" name="address">
+						    </div>
+						    <div class="mui-input-row">
+						        <label for="trade">所属行业：</label>
+						    	<input id="trade" type="text" name="trade">
+						    </div>
+						    <div class="mui-input-row">
+						        <label for="phone">联系电话：</label>
+						    	<input id="phone" type="text" name="phone">
+						    </div>
+						    <div class="mui-input-row">
+						        <label for="kind">经营种类：</label>
+						    	<input id="kind" type="text" name="kind">
+						    </div>
+						    <div class="mui-input-row">
+						        <label for="description">商家描述：</label>
+						    	<input id="description" type="text" name="description">
+						    </div>
+						</form>
+						<div class="lsc-input-group">
+								<button type="button" class="mui-btn mui-btn-primary" >提交</button>
+						</div>
+				  	</section>
+				</div>
+	  	</article>
+	  	<article class="lsc-wrap mui-content " style="display: none">
+	  		<video id="video" autoplay="" style='width:64rem;height:4.8rem'></video>
+			<canvas id="canvas" width="640" height="480"></canvas>
+	  	</article>
+</body>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	//适配移动端
+  	(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+            }
+        };
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	
+  	mui.init({
+  		 gestureConfig:{
+		   tap: true, //默认为true
+		   doubletap: true, //默认为false
+		   longtap: true, //默认为false
+		   swipe: true, //默认为true
+		   drag: true, //默认为true
+		   hold:false,//默认为false，不监听
+		   release:false//默认为false，不监听
+		  }
+  	});
+  	
+  	//返回键
+	var back=document.getElementsByClassName("mui-action-back")[0];
+		back.addEventListener("tap",function(){
+			mui.openWindow({
+			url:'lsc-myself.html',
+			id:'lsc-myself.html'
+		})
+	})
+  	
+  	//获取添加营业执照/添加法人身份证相关元素
+  	var wrap=document.getElementsByClassName("lsc-wrap");
+  	var pluys=document.getElementsByClassName("mui-icon-plus");
+
+	//添加营业执照事件
+	pluys[0].addEventListener("tap",function(){
+			mui.alert("Haven't set up this function！","sorry");
+	});
+	pluys[1].addEventListener("tap",function(){
+			mui.alert("Haven't set up this function！","sorry");
+	});
+	
+	//点击提交按钮
+	var primaty=document.getElementsByClassName("mui-btn-primary")[0];
+	var ipts=document.getElementsByTagName("input");
+	console.log(ipts[0].value);
+	primaty.addEventListener("tap",function(){
+		
+		if(ipts[0].value=="" || ipts[1].value=="" || ipts[2].value=="" || ipts[3].value=="" || ipts[4].value==""){
+			mui.alert("请输入完整信息！","sorry");
+			
+			return;
+		}
+		mui.toast("设置成功");
+	});
+</script>
+</html>

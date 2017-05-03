@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/lsc-style.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left lsc-back"></a>
+	    <h1 class="mui-title">账户支出明细</h1>
+	</header>
+
+	    <article class="lsc-wrap mui-content">
+			<!--账单-->
+			<section class="lsc-bill-wrap">
+				<header class="lsc-bill-header">
+					<span>操作时间</span>
+					<span>进出账</span>
+					<span>金额（元）</span>
+				</header>
+				
+				<section class="lsc-bill-detail-container">
+					<section class="lsc-bill-detail">
+						<span>2017-02-18</span>
+						<span>支出</span>
+						<span>-300</span>
+					</section>
+					
+					<section class="lsc-bill-quarry">
+						<div>
+							<span>单号：</span>
+							<span></span>
+						</div>
+						<div>
+							<span>报单会员账户：</span>
+							<span></span>
+						</div>
+						<div>
+							<span>报单方式：</span>
+							<span></span>
+						</div>
+					</section>
+					
+					<section class="lsc-remaining-sum">
+						<span>
+							<span>2017-02-18</span>
+							<span>13:29:18</span>
+						</span>
+						<span>
+							<span>余额：</span>
+							<span>68.00</span>
+						</span>
+					</section>
+				</section>
+				
+				<section class="lsc-bill-detail-container">
+					<section class="lsc-bill-detail">
+						<span>2017-02-18</span>
+						<span>支出</span>
+						<span>-300</span>
+					</section>
+					
+					<section class="lsc-bill-quarry">
+						<div>
+							<span>单号：</span>
+							<span></span>
+						</div>
+						<div>
+							<span>报单会员账户：</span>
+							<span></span>
+						</div>
+						<div>
+							<span>报单方式：</span>
+							<span></span>
+						</div>
+					</section>
+					
+					<section class="lsc-remaining-sum">
+						<span>
+							<span>2017-02-18</span>
+							<span>13:29:18</span>
+						</span>
+						<span>
+							<span>余额：</span>
+							<span>68.00</span>
+						</span>
+					</section>
+				</section>
+			</section>
+	  	</article>
+</body>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" charset="utf-8">
+  	mui.init();
+  	
+  	
+  	//适配移动端
+  	(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+            }
+        };
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+		mui.init({
+			tap: true, //默认为true
+	   		doubletap: true, //默认为false
+			longtap: true, //默认为false
+			swipe: true, //默认为true
+			drag: true, //默认为true
+			hold:false,//默认为false，不监听
+			release:false//默认为false，不监听
+		});
+
+		//返回我的主页
+		var back=document.getElementsByClassName("mui-action-back")[0];
+			back.addEventListener("tap",function(){
+				mui.openWindow({
+				url:'lsc-myself.html',
+				id:'lsc-myself.html'
+			})
+		})
+</script>
+</html>

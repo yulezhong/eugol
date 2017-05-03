@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<script src="js/mui.min.js"></script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			.clear:after {
+				content: "";
+				display: block;
+				clear: both;
+			}
+			
+			ul li {
+				list-style: none;
+			}
+			
+			.plus-margin .header {
+				position: fixed !important;
+				top: 0;
+				color: #00cc7d;
+			}
+			
+			.header a {
+				color: #00cc7d;
+			}
+			
+			#yu-search-wrap {
+				width: 60%;
+				bottom: 0;
+				margin: 0 1.3rem;
+				padding-left: 0;
+			}
+			
+			.header #yu-search-wrap {
+				font-size: 0.12rem;
+				font-weight: 300;
+			}
+			
+			.yu-nav {
+				padding-top: 0.3rem;
+				width: 100%;
+				text-align: center;
+				background: #FFFFFF;
+			}
+			
+			.yu-nav ul {
+				width: 90%;
+				margin: 0 auto;
+			}
+			
+			.yu-nav ul li {
+				list-style: none;
+				float: left;
+				width: 18%;
+				margin-left: 9.3333%;
+				margin-top: 0.1rem;
+				margin-bottom: 0.1rem;
+			}
+			
+			.yu-nav ul li img {
+				width: 100%;
+			}
+			
+			.yu-nav ul li span {
+				font-size: 0.28rem;
+				color: #666666;
+				display: block;
+			}
+			
+			.yu-nav .clear-margin {
+				margin-left: 0;
+			}
+			/*------限时抢购------*/
+			
+			.activity {
+				background: #FFFFFF;
+				margin-top: 0.2rem;
+				border-top: 1px solid #dcdcdc;
+				border-bottom: 1px solid #dcdcdc;
+			}
+			
+			.activity>div {
+				float: left;
+			}
+			
+			.yu-left p {
+				margin-top: 0.13rem;
+			}
+			
+			.yu-left {
+				width: 40%;
+				border-right: 1px solid #dcdcdc;
+				padding: 0.15rem;
+			}
+			
+			.yu-left img {
+				width: 100%;
+			}
+			
+			.yu-activity-title {
+				font-size: 0.4rem;
+				color: #f13d3a;
+			}
+			
+			.yu-time-out {
+				font-size: 0.25rem;
+			}
+			
+			.yu-right {
+				width: 60%;
+			}
+			
+			.yu-right ul li:first-child {
+				border-bottom: 1px solid #dcdcdc;
+			}
+			
+			.yu-right ul li {
+				height: 1.65rem;
+				padding: 0.15rem;
+			}
+			
+			.yu-right ul li div:first-child {
+				float: left;
+			}
+			
+			.yu-right ul li div:last-child {
+				float: right;
+				width: 40%;
+				height: 100%;
+			}
+			
+			.yu-right ul li p {
+				margin-bottom: 0.05rem;
+				margin-top: 0.13rem;
+			}
+			
+			.yu-right-img1 img {
+				width: 100%;
+				height: 100%
+			}
+			
+			.yu-right-img2 img {
+				width: 100%;
+				height: 100%;
+			}
+			
+			.yu-phone-title {
+				font-size: 0.4rem;
+				color: #974eda;
+			}
+			
+			.yu-phone-detail {
+				font-size: 0.25rem;
+			}
+			
+			.yu-care-title {
+				font-size: 0.4rem;
+				color: #00cc7d;
+			}
+			/*------end------*/
+			
+			/*------猜你喜欢------*/
+			
+			.yu-guess-like{
+				background: #FFFFFF;
+			}
+			
+			.yu-food-brand ul li {
+				width: 100%;
+				height: 2rem;
+				border-top: 1px solid #dcdcdc;
+				padding-top: 0.15rem;
+				padding-bottom: 0.15rem;
+				padding-left: 0.15rem;
+			}
+			
+			.yu-food-brand ul li div:first-child {
+				float: left;
+				width: 24%;
+			}
+			
+			.yu-food-brand ul li div:first-child img {
+				width: 100%;
+			}
+			
+			.yu-food-brand ul li div:last-child {
+				float: left;
+				margin-left: 0.15rem;
+				text-align: left;
+			}
+			
+			.yu-like-title p {
+				height: 0.9rem;
+				line-height: 0.9rem;
+				color: #000000;
+				margin-bottom: 0;
+				font-size: 0.28rem;
+				margin-top: 0.2rem;
+				padding-left: 0.3rem;
+    			font-weight: bold;
+			}
+			
+			.yu-food-brand {
+				text-align: center;
+			}
+			
+			.yu-food-brand ul li p {
+				color: black;
+				font-size: 0.37rem;
+				margin-bottom: 0.1rem;
+				margin-top: 0.1rem;
+			}
+			.yu-food-brand ul li span{
+				color: gray;
+				font-size: 0.27rem;
+			} 
+		</style>
+	</head>
+
+	<body>
+
+		<!-- 主页面容器 -->
+		<div class="mui-inner-wrap plus-margin">
+			<!-- 主页面标题 -->
+			<header class="mui-bar mui-bar-nav header">
+				<div class="mui-pull-left mui-action-back">
+					<span class="mui-icon mui-icon-left-nav"></span>
+				</div>
+				<div class="mui-input-row mui-search mui-pull" id="yu-search-wrap">
+					<input type="search" class="mui-input-clear" id="yu-search-ipt" placeholder="输入您要搜索的商品" />
+				</div>
+				<span class="mui-icon mui-icon-person mui-pull-right"></span>
+			</header>
+			
+			<div class="mui-content">		
+				<!--导航-->
+				<div class="yu-nav">
+					<ul class="clear">
+						<li class="clear-margin">
+							<a>
+								<img src="images/aliance/food.png" alt="" />
+								<span>美食</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="images/aliance/hotel.png" alt="" />
+								<span>酒店</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="images/aliance/relaxation.png" alt="" />
+								<span>休闲娱乐</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="images/aliance/film.png" alt="" />
+								<span>电影</span>
+							</a>
+						</li>
+						<li class="clear-margin">
+							<a>
+								<img src="images/aliance/cloth.png" alt="" />
+								<span>服饰</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="images/aliance/sport.png" alt="" />
+								<span>运动健身</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<img src="images/aliance/ktv.png" alt="" />
+								<span>KTV</span>
+							</a>
+						</li>
+						<li id="shopClassify">
+							<img src="images/aliance/series.png" alt="" />
+							<span>商家分类</span>
+						</li>
+						<ul>
+				</div>
+				<!--活动特惠-->
+				<div class="activity clear">
+					<div class="yu-left">
+						<a>
+							<p class="yu-activity-title">7.28特惠美食</p>
+							<p class="yu-time-out">限时抢购</p>
+							<img src="images/aliance/activity.jpg" alt="" />
+						</a>
+					</div>
+					<div class="yu-right">
+						<ul>
+							<li class="clear">
+								<a>
+									<div>
+										<p class="yu-phone-title">手机数码</p>
+										<p class="yu-phone-detail">小米Max 6.44寸大屏</p>
+									</div>
+									<div class="yu-right-img1">
+										<img src="images/aliance/phone.jpg" alt="" />
+									</div>
+								</a>
+							</li>
+							<li class="clear">
+								<a>
+									<div>
+										<p class="yu-care-title">美容护肤</p>
+										<p class="yu-phone-detail">拉杜蓝乔葡萄籽油</p>
+									</div>
+									<div class="yu-right-img2">
+										<img src="images/aliance/care.jpg" alt="" />
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!--猜你喜欢-->
+				<div class="yu-guess-like">
+					<div class="yu-like-title">
+						<p>猜你喜欢</p>
+					</div>
+					<div class="yu-food-brand">
+						<ul>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/cantanese.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/fish.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/honor.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/koria.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/coffee.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a class="clear">
+									<div>
+										<img src="images/aliance/chicken_pie.jpg" alt="" />
+									</div>
+									<div>
+										<p>麦当劳麦乐送(高薪合家福点)</p>
+										<span>麦辣鸡腿堡套餐,建议单人使用</span>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/layout.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		mui.init();
+		
+		document.getElementById("shopClassify").addEventListener("tap",function(){
+			mui.openWindow({
+				url:'brand_series.html',
+				id:'brand_series',
+				show:{
+					duration:300
+				}
+			})
+		})
+		
+		mui(".yu-food-brand").on('tap','a',function(){
+			mui.openWindow({
+				url:'business_details.html',
+				id:'business_details',
+				show:{
+					duration:300
+				}
+			})
+		})
+	</script>
+</html>

@@ -1,0 +1,96 @@
+*{
+	margin:0;
+	padding:0;
+}
+html,body{
+	width:100%;
+}
+.mui-bar-nav{
+	background-color: #2AC845;
+}
+.mui-title{
+	color: #FFFFFF;
+	font-size:0.3rem;
+}
+.mui-action-back{
+	color: #FFFFFF;
+}
+/*收货地址 lsc-receipt-address.html*/
+.lsc-table-view{
+	width:100%;
+	height:1.5rem;
+	margin-top:0.2rem;
+	font-size:0.3rem;
+}
+.lsc-navigate-right{
+	display: block;
+	height: 100%;
+}
+.lsc-navigate-right span{
+	line-height: 0.6rem;
+}
+.lsc-table-view:nth-of-type(1) .mui-navigate-right span:nth-of-type(3){
+	color:#FF8000;
+}
+.lsc-table-view:nth-of-type(1) ~.lsc-table-view .mui-navigate-right span:nth-of-type(3){
+	color:#FF8000;
+	display:none;
+}
+.lsc-new-address{
+	width:96%;
+	margin:auto;
+	text-align: center;
+	position: absolute;
+	left:0;
+	top: 5rem;
+	right:0;
+}
+.lsc-new-btn-address{
+	width:100%;
+	font-size: 0.3rem;
+}
+/*收货地址编辑  lsc-address-compile.html*/
+.mui-input-group{
+	font-size:0.3rem;
+}
+.mui-input-group .lsc-default-container{
+	height:0.7rem;
+	margin:0.2rem auto;
+}
+.mui-input-group .lsc-default-container:last-child{
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    margin:auto 0.3rem;
+}
+.lsc-default-container input{
+	height:0.8rem;
+	font-size:0.3rem;
+	line-height: 0.8rem;
+}
+.lsc-default-container>div:nth-of-type(1){
+	flex:7;
+	-webkit-box-flex:7;
+}
+.lsc-default-container>div:nth-of-type(2){
+	flex:1;
+	-webkit-box-flex:1;
+}
+.mui-btn-primary{
+	background-color: #2AC845;
+	border:none;
+	width:100%;
+	height:0.7rem;
+}
+
+.lsc-add-address{
+	margin-top: 0.5rem;
+}
+
+#addressNone{
+	display: none;
+}
+#addressBlock{
+	display: inline-block;
+}

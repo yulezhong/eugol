@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/lsc-style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css"/>
+</head>
+<body>
+	<!-- 主页面标题 -->
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">我的主页</h1>
+			<button id='setting' class="mui-btn-link mui-icon mui-icon-gear"></button>
+		</header>
+	    <article class="lsc-wrap mui-content">
+	  		<!--顶部用户信息-->
+	  		<section class="lsc-signIn">
+		  		<section class="lsc-signIn-container">
+			      	<!--用户信息与签到按钮-->
+			      	<section class="lsc-signIn-message">
+			      		<div class="lsc-signIn-left">
+				            <img class="lsc-signIn-icon" src="images/myself/head.png" />
+				            <div>
+				                <p id="username">王二</p>
+				                <p>13012588605</p>
+				                <p>普通会员</p>
+			                </div>
+			            </div>
+						<div class="lsc-signIn-btn"><button type="button" class="mui-btn">签到</button></div>
+			      	</section>
+		      	</section>
+		    </section>
+		    <!--账户信息栏-->
+		  	<section class="lsc-container">
+		  		<div class="lsc-money-container">
+			  		<div class="lsc-account-balance">
+			  			<div class="lsc-center">
+			  				<p>74.00</p>
+			  				<p>可用余额</p>
+			  			</div>
+			  		</div>
+			  		<div class="lsc-account-available">
+			  			<div class="lsc-center">
+			  				<p>4789</p>
+			  				<p>可用积分</p>
+			  			</div>
+			  		</div>
+			  		<div class="lsc-account-inactive">
+			  			<div class="lsc-center">
+			  				<p>4789</p>
+			  				<p>待用积分</p>
+			  			</div>
+			  		</div>
+		  		</div>
+		  		<div class="lsc-money-container">
+			  		<div class="lsc-account-ticket">
+			  			<div class="lsc-center">
+			  				<p>104589</p>
+			  				<p>商品兑换券</p>
+			  			</div>
+			  		</div>
+			  		<div class="lsc-account-increase">
+			  			<div class="lsc-center">
+			  				<p>55156</p>
+			  				<p>可培增积分</p>
+			  			</div>
+			  		</div>
+		  		</div>
+
+		  	</section>
+		  	<!--相关功能切换-->
+		  	<section class="lsc-container">
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">账户现金管理</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">现金充值</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">现金转账</a>
+				    </li>
+				</ul>
+		  	</section>
+		  	<section class="lsc-container">
+		  		<ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">可用积分管理</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">待用积分管理</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">可用转待用</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">可用积分转账</a>
+				    </li>
+				</ul>
+		  	</section>
+		  	<!--相关功能切换与设值-->
+		  	<section class="lsc-two-container">
+				<ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">商品兑换券</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">报单商品券</a>
+				    </li>
+				</ul>
+		  	</section>
+		  	<section class="lsc-two-container">
+		  		<ul class="mui-table-view">
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">申请商家联盟</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">申请运营中心</a>
+				    </li>
+				   	<li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">消费订单管理</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">我的好友</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">修改密码</a>
+				    </li>
+				    <li class="mui-table-view-cell">
+				        <a class="mui-navigate-right">修改姓名</a>
+				    </li>
+				</ul>
+				<!--<div class="lsc-input-group">
+					<button id="exitBtn" type="button" class="mui-btn-primary" style="color:rgba(255,255,254,1)">确认退出</button>
+				</div>-->
+	  	</article>
+</body>
+<script type="text/javascript" src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+<script type="text/javascript" src="js/layout.js"></script>
+<script type="text/javascript" charset="utf-8">
+	
+	//初始化
+	mui.init();
+	var username=document.getElementById("username");
+	var nameJson=app.getName();
+	username.innerText= nameJson.account;
+	
+	//签到事件
+	var signIn=document.getElementsByClassName("mui-btn")[0];
+	signIn.addEventListener("tap",function(){
+		this.innerText="已签到";
+		this.style["color"]="#FF0000";
+	});
+	//点击跳转相应设置页面
+	var skips=document.getElementsByClassName("mui-table-view-cell");
+
+		//账户现金管理
+	skips[0].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-cash-management.html',
+			id:'lsc-cash-management.html'
+		})
+	});
+	//现金充值
+	skips[1].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-recharger.html',
+			id:'zmt-recharger.html'
+		})
+	});
+	//现金转账
+	skips[2].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-recharge-transformr.html',
+			id:'zmt-recharge-transformr.html'
+		})
+	});
+	//可用积分管理
+	skips[3].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-anagement-of-client-credit.html',
+			id:'lsc-anagement-of-client-credit.html'
+		})
+	});
+	//待用积分管理
+	skips[4].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-stay-with-integral-management.html',
+			id:'lsc-stay-with-integral-management.html'
+		})
+	});
+	//可用积分转换为待用
+	skips[5].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-integral-scale.html',
+			id:'zmt-integral-scale.html'
+		})
+	});
+	//可用积分转账
+	skips[6].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-integral-transfer.html',
+			id:'zmt-integral-transfer.html'
+		})
+	});
+	//商品券管理
+	skips[7].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-commodity-certificates.html',
+			id:'lsc-commodity-certificates.html'
+		})
+	});
+	//报单商品券
+	skips[8].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-moneyl.html',
+			id:'zmt-moneyl.html'
+		})
+	});
+	skips[9].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-apply-for-alliance.html',
+			id:'lsc-apply-for-alliance.html'
+		})
+	});
+	//申请运营中心
+	skips[10].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-angency.html',
+			id:'zmt-angency.html'
+		})
+	});
+	//消费订单管理
+	skips[11].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-total-bill.html',
+			id:'lsc-total-bill.html'
+		})
+	});
+	//我的好友
+	skips[12].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'zmt-myfirend.html',
+			id:'zmt-myfirend.html'
+		})
+	});
+	//修改密码
+	skips[13].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-change-password.html',
+			id:'lsc-change-password.html'
+		})
+	});
+	//修改姓名
+	skips[14].addEventListener("tap",function(){
+		mui.openWindow({
+			url:'lsc-edit-name.html',
+			id:'lsc-edit-name.html'
+		})
+	});
+	
+// 主页设置
+		(function($, doc) {
+			$.init();
+			var settings = app.getSettings();
+			var account = doc.getElementById('account');
+			//
+			window.addEventListener('show', function() {
+				var state = app.getState();
+				account.innerText = state.account;
+			}, false);
+			$.plusReady(function() {
+				var settingPage = $.preload({
+					"id": 'setting',
+					"url": 'setting.html'
+				});
+				//设置
+				var settingButton = doc.getElementById('setting');
+				//settingButton.style.display = settings.autoLogin ? 'block' : 'none';
+				settingButton.addEventListener('tap', function(event) {
+					$.openWindow({
+						id: 'setting',
+						show: {
+							aniShow: 'pop-in'
+						},
+						styles: {
+							popGesture: 'hide'
+						},
+						waiting: {
+							autoShow: false
+						}
+					});
+				});
+				//--
+				$.oldBack = mui.back;
+				var backButtonPress = 0;
+				$.back = function(event) {
+					backButtonPress++;
+					if (backButtonPress > 1) {
+						plus.runtime.quit();
+					} else {
+						plus.nativeUI.toast('再按一次退出应用');
+					}
+					setTimeout(function() {
+						backButtonPress = 0;
+					}, 1000);
+					return false;
+				};
+			});
+		}(mui, document));
+</script>
+</html>

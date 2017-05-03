@@ -1,0 +1,526 @@
+{
+	"main.html": {
+		"refer": [
+			"setting.html"
+		],
+		"resources": []
+	},
+	"home.html": {
+		"resources": [
+			"images/home/tb5.jpg",
+			"images/home/icon4.png",
+			"images/home/sp1.png",
+			"images/home/tb8.jpg",
+			"images/home/sp3.png",
+			"images/home/icon2.png",
+			"js/jquery-3.1.1.min.js",
+			"images/home/tb6.jpg",
+			"images/home/tb13.jpg",
+			"images/home/list1.jpg",
+			"images/home/tb9.jpg",
+			"images/home/icon1.png",
+			"images/home/tb3.jpg",
+			"images/home/sp2.png",
+			"images/home/tb4.jpg",
+			"images/home/tb12.jpg",
+			"images/home/tb11.jpg",
+			"css/home.css",
+			"images/home/tb10.jpg",
+			"images/home/close1.jpg",
+			"images/home/tb1.jpg",
+			"images/home/list2.jpg",
+			"images/home/tb2.jpg",
+			"images/home/icon3.png",
+			"images/home/tb7.jpg",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/layout.js"
+		],
+		"refer": [
+			"shop.html",
+			"news.html",
+			"slide.html",
+			"boutique.html",
+			"classify_list2.html",
+			"classify_list1.html"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"home.html",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"js/layout.js",
+			"car.html",
+			"js/app.js"
+		],
+		"refer": [
+			"home.html",
+			"classify.html",
+			"car.html",
+			"login.html",
+			"lsc-myself.html",
+			"zmt-car.html",
+			"setting.html"
+		]
+	},
+	"classify.html": {
+		"resources": [
+			"images/classify/wujin.jpg",
+			"css/classify.css",
+			"images/classify/dianfanbao.jpg",
+			"images/classify/shuma.jpg",
+			"images/classify/kaochuan.jpg",
+			"images/classify/yundong.jpg",
+			"images/classify/jiu.jpg",
+			"images/classify/qunzi.jpg",
+			"images/classify/jiadian.jpg",
+			"images/classify/jiaju.jpg",
+			"images/classify/chufang.jpg"
+		],
+		"refer": [
+			"classify_list1.html"
+		]
+	},
+	"car.html": {
+		"resources": [
+			"css/zmt-car.css",
+			"css/style.css",
+			"images/car/cloth.png"
+		],
+		"refer": []
+	},
+	"login.html": {
+		"resources": [
+			"js/app.js",
+			"js/mui.jsonp.js",
+			"js/mui.enterfocus.js",
+			"js/md5.js",
+			"images/sinaweibo.png",
+			"images/weixin.png",
+			"images/qq.png",
+			"images/login/sinaweibo.png",
+			"images/login/weixin.png",
+			"images/login/qq.png",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"css/style.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"main.html",
+			"reg.html",
+			"forget_password.html",
+			"unlock.html",
+			"lsc-myself.html",
+			"myselfIndex.html",
+			"index.html",
+			"demo.html"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"libs/easymob-webim-sdk/easemob.im-1.0.5.js",
+			"libs/easymob-webim-sdk/json2.js",
+			"libs/easymob-webim-sdk/jquery-1.11.1.js",
+			"js/mui.locker.js",
+			"js/feedback.js",
+			"css/feedback-page.css",
+			"js/feedback-page.js",
+			"libs/easymob-webim-sdk/strophe-custom-2.0.0.js",
+			"js/mui.view.js",
+			"images/iconfont-tianjia.png",
+			"images/login/iconfont-tianjia.png",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"login.html"
+		]
+	},
+	"classify_list1.html": {
+		"resources": [
+			"css/classify_list1.css",
+			"index.html",
+			"images/classify/dianfanbao.jpg",
+			"fonts/mui.ttf",
+			"images/classify/yundong.jpg",
+			"images/classify/jiu.jpg",
+			"images/classify/wujin.jpg",
+			"images/classify/shuma.jpg",
+			"js/mui.min.js",
+			"css/iconfont.css",
+			"images/classify/kaochuan.jpg",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"images/classify/qunzi.jpg",
+			"images/classify/jiadian.jpg",
+			"js/layout.js",
+			"images/classify/jiaju.jpg",
+			"images/classify/chufang.jpg",
+			"classify_list2.html"
+		],
+		"refer": [
+			"classify_list2.html"
+		]
+	},
+	"classify_list2.html": {
+		"resources": [
+			"images/classify/xiaomi.jpg",
+			"images/classify/xiaomiphone.jpg",
+			"css/classify_list2.css",
+			"js/jquery-3.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/iconfont.css",
+			"css/mui.min.css",
+			"fonts/iconfont.ttf",
+			"js/layout.js",
+			"images/classify/xiaomi3.jpg",
+			"images/classify/xiaomi1.jpg",
+			"images/classify/xiaomi5.jpg",
+			"images/classify/xiaomi4.jpg",
+			"images/classify/xiaomi6.jpg",
+			"images/classify/xiaomi2.jpg",
+			"classify_list1.html"
+		],
+		"refer": [
+			"zmt-car.html",
+			"classify_list1.html"
+		]
+	},
+	"shop.html": {
+		"resources": [
+			"images/aliance/coffee.jpg",
+			"images/aliance/food.png",
+			"images/aliance/fish.jpg",
+			"images/aliance/cantanese.jpg",
+			"images/aliance/relaxation.png",
+			"images/aliance/cloth.png",
+			"images/aliance/chicken_pie.jpg",
+			"images/aliance/sport.png",
+			"images/aliance/activity.jpg",
+			"images/aliance/film.png",
+			"images/aliance/ktv.png",
+			"images/aliance/hotel.png",
+			"images/aliance/honor.jpg",
+			"images/aliance/phone.jpg",
+			"images/aliance/koria.jpg",
+			"images/aliance/series.png",
+			"images/aliance/care.jpg",
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/layout.js"
+		],
+		"refer": [
+			"brand_series.html",
+			"business_details.html"
+		]
+	},
+	"brand_series.html": {
+		"resources": [
+			"images/brand_series/koria.jpg",
+			"images/brand_series/coffee.jpg",
+			"images/brand_series/fish.jpg",
+			"images/brand_series/cantanese.jpg",
+			"images/brand_series/honor.jpg",
+			"images/brand_series/han.png",
+			"images/brand_series/back_home.jpg",
+			"images/brand_series/western.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/layout.js"
+		],
+		"refer": []
+	},
+	"business_details.html": {
+		"resources": [
+			"images/business_detail1/brand-pic.jpg",
+			"images/business_detail1/food-pic.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/business_detail1/mcdonald.jpg",
+			"js/layout.js"
+		],
+		"refer": []
+	},
+	"news.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/layout.js"
+		],
+		"refer": []
+	},
+	"unlock.html": {
+		"resources": [
+			"js/mui.locker.js",
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"main.html",
+			"index.html"
+		]
+	},
+	"slide.html": {
+		"resources": [
+			"images/slide/conImg.jpg",
+			"images/slide/banner.jpg",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"boutique.html": {
+		"resources": [
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/boutique/summer.png"
+		]
+	},
+	"lsc-myself.html": {
+		"resources": [
+			"css/lsc-style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/myself/head.png",
+			"js/app.js",
+			"home.html",
+			"css/iconfont.css",
+			"fonts/iconfont.ttf",
+			"index.html",
+			"js/layout.js"
+		],
+		"refer": [
+			"index.html",
+			"home.html",
+			"classify.html",
+			"car.html",
+			"login.html",
+			"lsc-cash-management.html",
+			"zmt-recharger.html",
+			"zmt-recharge-transformr.html",
+			"zmt-integral-scale.html",
+			"zmt-moneyl.html",
+			"lsc-total-bill.html",
+			"zmt-angency.html",
+			"lsc-apply-for-alliance.html",
+			"lsc-edit-name.html",
+			"lsc-change-password.html",
+			"lsc-anagement-of-client-credit.html",
+			"lsc-stay-with-integral-management.html",
+			"lsc-commodity-certificates.html",
+			"zmt-integral-transfer.html",
+			"zmt-myfirend.html"
+		]
+	},
+	"myselfIndex.html": {
+		"resources": [
+			"home.html",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"home.html",
+			"classify.html",
+			"car.html",
+			"lsc-myself.html"
+		]
+	},
+	"demo.html": {
+		"refer": [
+			"setting.html"
+		],
+		"resources": [
+			"js/app.js",
+			"js/mui.min.js",
+			"css/mui.min.css"
+		]
+	},
+	"lsc-cash-management.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/jquery-3.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"zmt-recharge-transformr.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-3.1.1.min.js"
+		]
+	},
+	"zmt-recharger.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-3.1.1.min.js"
+		]
+	},
+	"zmt-integral-scale.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-3.1.1.min.js"
+		]
+	},
+	"zmt-moneyl.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-3.1.1.min.js",
+			"images/myself/head.png"
+		]
+	},
+	"lsc-total-bill.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/lsc-style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/myself/pendant.png",
+			"images/myself/beuaty.jpg",
+			"images/myself/hh.jpg",
+			"images/myself/tea-oil.png"
+		]
+	},
+	"zmt-angency.html": {
+		"resources": [
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/myself/head.png"
+		]
+	},
+	"lsc-apply-for-alliance.html": {
+		"resources": [
+			"css/lsc-style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/myself/head.png"
+		]
+	},
+	"lsc-edit-name.html": {
+		"resources": [
+			"css/lsc-style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"js/jquery-3.1.1.min.js"
+		]
+	},
+	"lsc-change-password.html": {
+		"resources": [
+			"css/lsc-style.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"zmt-car.html": {
+		"resources": [
+			"js/zmt-car.js",
+			"css/zmt-car.css",
+			"images/car/cloth.png",
+			"js/jquery-3.1.1.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		],
+		"refer": [
+			"zmt-car-sureBook.html"
+		]
+	},
+	"zmt-car-sureBook.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"js/mui.min.js",
+			"css/zmt-car.css",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/car/cloth.png"
+		],
+		"refer": [
+			"lsc-address-compile.html"
+		]
+	},
+	"lsc-address-compile.html": {
+		"resources": [
+			"css/receipt-address.css",
+			"js/zmt-car-address.js",
+			"css/mui.css"
+		],
+		"refer": [
+			"lsc-receipt-address.html"
+		]
+	},
+	"lsc-anagement-of-client-credit.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"lsc-stay-with-integral-management.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"lsc-commodity-certificates.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"zmt-integral-transfer.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css"
+		]
+	},
+	"zmt-myfirend.html": {
+		"resources": [
+			"js/jquery-3.1.1.min.js",
+			"css/zmt-myself.css",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"images/myself/head.png"
+		]
+	}
+}

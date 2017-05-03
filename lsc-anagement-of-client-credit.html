@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-myself.css" />
+	</head>
+	<body>
+			<header class="mui-bar mui-bar-nav">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			    <h1 class="mui-title">可用积分管理页面</h1>
+			</header>
+		<!-- 主页面内容容器 -->
+            <div class="mui-content">
+                <div class="mui-scroll" id="zmt-money-bottom" >
+                    <!-- 主界面具体展示内容 -->
+                     <!--固定顶部-->
+                  <div class="zmt-intergral">
+                		<p>19950623</p>
+                		<p>我的积分</p>
+                  </div>
+                  
+                  <ul class="zmt-money-ul">
+					    <li><span>转待用数</span><input type="text" placeholder="请输入转换倍数" /><span>分</span></li>
+					    <li id="zmt-intergral-li">
+					    	<p>注意事项：当前转换倍数为1:2，出账：40天至60天</p>
+					    	<p>代用积分：0，转换后金额：0</p>
+					    </li>
+					</ul>
+					       
+					<ul class="mui-table-view">
+					    <li class="mui-table-view-cell">可用积分管理规则</li>
+					    <li class="mui-table-view-cell" id="zmt-intergral-rule">
+					    	<p>1、可用金额按比例转入代用积分，实时到账</p>
+					    	<p>2.会员积分转账收入的积分，已禁止转入代用积分倍增。</p>
+					    	<p>3.可倍增积分具体请看"中心可倍增积分额值"</p>
+					    </li>
+					</ul>
+				
+					 <p class="zmt-intergral-sure">
+					 	<span>确定</span>
+					 	<span>取消</span>
+					</p>
+					       
+				
+                    
+                </div>
+
+            </div>
+	</body>
+		<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+		 (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    	
+		mui.init({
+			tap: true, //默认为true
+			swipeBack: true //启用右滑关闭功能
+		});
+		//返回我的主页
+		var $back=jQuery(".mui-action-back");
+			$back.eq(0).on("tap",function(){
+				mui.openWindow({
+				url:'lsc-myself.html',
+				id:'lsc-myself.html'
+			})
+		})
+			
+		//获取按钮元素
+		var $btnSpan=jQuery(".zmt-intergral-sure>span");
+		//获取input元素
+		var $ipts=jQuery("input");
+
+		//获取积分元素
+		var $intergral=jQuery(".zmt-intergral>p:nth-of-type(1)");	
+		
+		//限制输入，只能输入数字
+		var reg=/^\+?[1-9][0-9]*$/;
+		
+		//确定按钮
+			$btnSpan.eq(0).on("tap",function(){
+				//转入金额
+				if($ipts.val()!=""){
+					var btn = ["确定","取消"];
+					mui.confirm('确认需要进行此操作？','提示',btn,function(e){
+					    if(e.index==0){
+					    	if($("input").val()==""){
+					    		mui.alert("请完善信息","提示");
+					    		return;
+					    	}
+					    	if(reg.test($("input").val())&&Number($ipts.val())<Number($intergral.text())){
+
+								$intergral.text(eval($intergral.text()+"-"+$ipts.val()));
+								
+								
+								var btn = ["是","否"];
+								mui.confirm('是否前往积分待用页面？','提示',btn,function(e){
+									if(e.index==0){
+										mui.openWindow({
+											url:'lsc-stay-with-integral-management.html',
+											id:'lsc-stay-with-integral-management.html',
+											extras:{
+												name:$ipts.val()
+											}
+										})
+									}
+//								$("input").val("")
+								})
+								mui.alert("积分转换成功...","提示")
+					    		return;
+					    	}else{
+					    		mui.alert("输入的信息格式不符，请重试输入...","提示");
+					    		$("input").val("")	
+					    	}    
+						}
+				  	})
+					return;
+				}else{
+					mui.alert("请输入您要进行的积分数","提示");
+					return;
+				}
+			})
+		//取消按钮
+		$btnSpan.eq(1).on("tap",function(){
+				mui.alert("已取消","提示");
+				$ipts.val("");
+		});
+		</script>
+</html>

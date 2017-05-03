@@ -1,0 +1,99 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.clearfix:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.mui-bar-nav{
+	display: -webkit-box;
+}
+.mui-header a span{
+	font-size: 0.6rem;
+}
+
+#return-zc{
+	-webkit-box-flex:1;
+	display: block;
+}
+#qrCode-zc{
+	-webkit-box-flex:1;
+	display: block;
+	position: relative;
+}
+#qrCode-zc .num-zc{
+	position: absolute;
+    right: -0.1rem;
+    top: 0.2rem;
+    display: inline-block;
+    width: 0.3rem;
+    height: 0.3rem;
+    background-color: springgreen;
+    border-radius: 50%;
+    font-size: 0.3rem;
+    text-align: center;
+    line-height: 0.3rem;
+    color: white;
+}
+/*--------------------wrap--------------------*/
+
+.inner-zc{
+	width: 100%;
+}
+#nav-zc{
+	width: 100%;
+	display: -webkit-box;
+	list-style: none;
+	text-align: center;
+	height: 1rem;
+	background-color: white;
+	line-height: 0.8rem;
+}
+#nav-zc p{
+	-webkit-box-flex: 1;
+	width: 33.33%;
+	padding: 0.1rem 0;
+}
+#nav-zc p .down{
+	font-size: 0.3rem;
+}
+/*------------------*/
+.content-ul-zc{
+	
+}
+#list1-zc{
+	margin: 0.3rem 0;
+	background-color: white;
+}
+#list1-zc .list1-img-zc{
+	width: 2rem;
+	height: 2rem;
+	-webkit-box-flex: 1;
+	    margin: 0.2rem 0.1rem;
+}
+#list1-zc a{
+	display: block;
+	display: -webkit-box;
+}
+#list1-zc a .list1-right-zc{
+	-webkit-box-flex: 2;
+	padding: 0.3rem 0.2rem;
+}
+#list1-zc p{
+	font-size: 0.36rem;
+	height: 0.9rem;
+    padding: 0.2rem 0;
+}
+#list1-zc .list1-span-zc{
+	color: orange;
+	font-size: 0.32rem;
+	
+}
+#list1-zc .mui-icon-plus{	
+	font-size: 0.45rem;
+}
+/*----------footer----------*/
+

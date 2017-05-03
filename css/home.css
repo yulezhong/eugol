@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+ul{
+	list-style: none;
+}
+img{
+	width: 100%;
+}
+.mui-content{
+	background-color: #EFEFF4;
+}
+.ck-color-red{
+	color: red;
+}
+.ck-a{
+	text-decoration: underline;
+}
+
+/*首页第一个9宫格列表*/
+#ck-home-grid{
+	background-color: white;
+	margin-top: -0.2rem;
+}
+#ck-home-grid li{
+	border: none;
+}
+#ck-home-grid img{
+	width: 70%;
+}
+.mui-table-view.mui-grid-view .mui-table-view-cell .mui-media-body{
+	font-size: 0.28rem;
+	line-height: 0.4rem;
+}
+/*利民公告*/
+#ck-home-notice{
+	background-color: white;
+	display: flex;
+	justify-content: space-around;
+	padding:0.3rem 0;
+	margin: 1px 0;
+}
+#ck-notice-slider{
+	width: 60%;
+}	
+#ck-notice-slider a{
+	font-size: 0.3rem;
+	line-height: 0.4rem;
+	color: black;
+}
+
+/*商品列表wrap*/
+#commodityList{
+	padding: 0 0.1rem;
+}
+#commodityList a{
+	background-color: white;
+	color: black;
+}
+#commodityList p{
+	font-size: 0.25rem;
+}
+#commodityList span{
+	font-size: 0.35rem;
+}
+.list-text{
+	text-align: center;
+}
+
+/*列表标题*/
+.ck-home-LsTit{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0.3rem 0;
+}
+.line{
+	width: 0.5rem;
+	height: 1px;
+	border-bottom: 4px solid #00CC7D;
+}
+
+/*精品任选*/
+#ck-home-list1{
+	background-color: transparent;
+	border-bottom: none;
+}
+#ck-home-list1 li{
+	margin: 0.2rem 0;
+}
+#ck-home-list1 a{
+	background-color: transparent;
+}
+
+/*热卖推荐*/
+#ck-home-list2{
+	position: relative;
+}
+#ck-home-list2>a,#ck-home-list3>.list3-top>a{
+	padding: 0.2rem 0 0 0.2rem;
+}
+.list2-left{
+	width: 40%;
+	height: 3.9rem;
+	overflow: hidden;	
+	display: block;			
+}
+.list2-right{
+	width: 58%;
+	height: 1.85rem;
+	position: absolute;
+	right: 0;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+}
+#ck-home-list2 .list-text{
+	width: 50%;
+}
+.list2-right img{
+	width: 50%;	
+}
+#list2-right2{
+	position: absolute;
+	right: 0;
+	top: 2.05rem;
+}
+
+/*每周上新*/
+.list3-top{
+	height: 2rem;
+	margin-bottom: 0.1rem;
+}
+.list3-top,.list3-top>a,.list3-bottom{
+	display: flex;
+	justify-content: space-between;		
+}
+.list3-top>a{
+	width: 49%;
+}
+.list3-top>a>img{
+	width: 40%;
+}
+.list3-bottom>a{
+	width: 32%;
+}
+
+/*主题馆*/
+#ck-home-theme li{
+	padding: 0;
+}
+#ck-home-theme img{
+	margin-top: 0.2rem;
+}
+
+/*猜你喜欢*/
+#ck-home-like li{
+	padding: 0.05rem;
+}
+#ck-home-like a{
+	padding: 0;
+}
+#ck-home-like img{
+	width: 100%;
+}
+#ck-home-like .list-text{
+	text-align: left;
+	margin: 0.1rem;
+}

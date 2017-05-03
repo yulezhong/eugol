@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/zmt-car.css" />
+	</head>
+
+	<body>
+
+    <!-- 主页面标题 -->
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">购物车</h1>
+    </header>
+    <nav class="mui-bar mui-bar-tab">
+    	<div class="mui-input-row mui-checkbox allCheckP">
+    		<label>
+				<input name="checkbox1" value="Item 1" type="checkbox" >
+			</label>
+		</div>
+		<span>全选</span>
+		<p>
+			<span>合计：</span>
+			<span class="zmt-alltotal">￥00.00</span>
+			<span>(不含运费)</span>
+		</p>
+		<div>结算<span class="zmt-allNumber">(0)</span></div>
+    </nav>
+
+    <!-- 主页面内容容器 -->
+    <div class="mui-content">
+        <!--<div class="mui-input-row mui-checkbox mui-left">-->
+            <ul class="zmt-car-ul">	                    	
+			    <li id="zmt-car-li">
+			    	<div class="mui-input-row mui-checkbox mui-pull-left">
+			    		<label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</label>
+					</div>
+		    		<img class="cloth" src="images/car/cloth.png" alt="" />
+		    		<p>
+		    			<span>夏季最新爆款蕾丝凉爽显瘦...</span>
+					  	<span>规格：1盒6片</span>
+					  	<span class="zmt-price">￥29.5</span>
+		    		</p>
+					<p class="zmt-number">x1</p>
+			    </li>
+			    <li id="zmt-car-li">
+			    	<div class="mui-input-row mui-checkbox mui-pull-left">
+			    		<label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</label>
+					</div>
+		    		<img class="cloth" src="images/car/cloth.png" alt="" />
+		    		<p>
+		    			<span>夏季最新爆款蕾丝凉爽显瘦...</span>
+					  	<span>规格：1盒6片</span>
+					  	<span class="zmt-price">￥29.5</span>
+		    		</p>
+					<p class="zmt-number">x2</p>
+			    </li>
+			    <li id="zmt-car-li">
+			    	<div class="mui-input-row mui-checkbox mui-pull-left">
+			    		<label>
+							<input name="checkbox1" value="Item 1" type="checkbox">
+						</label>
+					</div>
+		    		<img class="cloth" src="images/car/cloth.png" alt="" />
+		    		<p>
+		    			<span>夏季最新爆款蕾丝凉爽显瘦...</span>
+					  	<span>规格：1盒6片</span>
+					  	<span class="zmt-price">￥29.5</span>
+		    		</p>
+					<p class="zmt-number">x10</p>
+			    </li>
+
+			</ul>
+		<!--</div>-->
+    </div>
+
+	</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zmt-car.js" ></script>
+<script type="text/javascript">
+        //适配移动端 
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function(){
+                    var clientWidth = docEl.clientWidth;
+                    if(!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+    
+	mui.init({
+		 gestureConfig:{
+   			tap: true//默认为true
+   		}
+	})
+	
+	
+
+</script>
+</html>

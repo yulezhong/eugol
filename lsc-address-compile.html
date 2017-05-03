@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/mui.css" />
+		<link rel="stylesheet" href="css/receipt-address.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">收货地址</h1>
+		</header>
+		<!--用户地址-->
+		<article class="lsc-wrap mui-content">
+			<section>
+				<div class="mui-table-view lsc-table-view">
+					<div class="mui-table-view-cell">
+						<a class="mui-navigate-right lsc-navigate-right">
+							<!--用户姓名与电话号码-->
+							<span>刘晓欣</span>
+							<span>13562021254</span>
+							<br />
+							<!--收货地址-->
+							<span>[默认]</span>
+							<span>广州市天河区东圃时代TIT广场</span>
+						</a>
+					</div>
+				</div>
+				<div class="mui-table-view lsc-table-view">
+					<div class="mui-table-view-cell">
+						<a class="mui-navigate-right lsc-navigate-right">
+							<!--用户姓名与电话号码-->
+							<span>刘晓欣</span>
+							<span>13562021254</span>
+							<br />
+							<!--收货地址-->
+							<span>[默认]</span>
+							<span>广州市天河区东圃时代TIT广场</span>
+						</a>
+					</div>
+				</div>
+			</section>
+			<section class="lsc-add-address">
+				<p><button type="button" class="mui-btn mui-btn-success lsc-new-btn-address">新增收货地址</button></p>
+			</section>
+		</article>
+	</body>
+	<script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" src="js/zmt-car-address.js"></script>
+	<script type="text/javascript" src="js/zmt-carsql.js"></script>
+	<script type="text/javascript">
+	//添加AddNew自定义事件监听
+		window.addEventListener('refresh',function(){
+			plus.webview.getWebviewById('lsc-address-compile.html').reload(); 
+		});
+		//适配移动端
+		(function(doc, win) {
+			var docEl = doc.documentElement,
+				resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+				recalc = function() {
+					var clientWidth = docEl.clientWidth;
+					if(!clientWidth) return;
+					if(clientWidth >= 750) {
+						docEl.style.fontSize = '100px';
+					} else {
+						docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+					}
+				};
+			if(!doc.addEventListener) return;
+			win.addEventListener(resizeEvt, recalc, false);
+			doc.addEventListener('DOMContentLoaded', recalc, false);
+		})(document, window);
+
+		//跳转
+		$(".lsc-add-address button").on("touchstart", function() {
+			mui.openWindow({
+				url: "lsc-receipt-address.html",
+				id: "lsc-receipt-address.html"
+			})
+
+		})
+		
+		
+//		localStorage.removeItem("$address")
+		
+//		var adrJson= app.getAddress();
+		var addressList=localStorage.getItem("$address");
+		addressList=addressList.split("");
+		addressList[0]="[";addressList[addressList.length-1]="]"
+		addressList=addressList.join("");
+		addressList=JSON.parse(addressList)
+		console.log(addressList)
+		
+		
+		for(var k in addressList){
+			console.log(addressList[k].name)
+			var $newDiv = $("<div class='mui-table-view lsc-table-view'></div>");
+			$newDiv.html(' <div class="mui-table-view-cell">' +
+				'<a class="mui-navigate-right lsc-navigate-right">' +
+				'<span>' + addressList[k].name+ '</span>' +
+				'<span>' +addressList[k].phone+ '</span>' +
+				'<br />' +
+				'<span id="'+addressList[k].addressBol+'">[默认]</span>' +
+				'<span>' + addressList[k].address + '</span>' +
+				'</a>' +
+				'</div>')
+			$(".lsc-wrap section:first-child").append($newDiv)
+		
+			
+			if(addressList[k].addressBol=="addressBlock"){
+				$(".lsc-table-view:nth-of-type(1) .mui-navigate-right span:nth-of-type(3)").attr("id","addressNone")
+			}
+			
+			
+
+	}
+		for(var j=addressList.length-1;j>=0;j--){
+				if(addressList[j].addressBol=="addressBlock"){
+					$(".lsc-table-view:nth-of-type(1) ~.lsc-table-view .mui-navigate-right span:nth-of-type(3)").attr("id","addressNone");	
+					$(".lsc-table-view:nth-of-type(1) ~.lsc-table-view .mui-navigate-right span:nth-of-type(3)").eq(j+1).attr("id","addressBlock");
+					
+					break;
+				}
+			} 
+		
+		alert(localStorage.getItem("$address"));
+
+
+		
+		
+			
+
+
+
+	</script>
+
+</html>

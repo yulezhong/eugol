@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/iconfont.css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="css/classify.css"/>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title">分类</h1>
+    </header>
+	<!---------------------wrap-------------------->
+	<div class="wrap-zc">
+		<div class="inner-zc clearfix">
+			<div class="list-zc">
+				<a>
+					<p>家居家纺</p>
+					<div class="list-img-zc">
+						<img src="images/classify/jiaju.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>3C数码</p>
+					<div class="list-img-zc">
+						<img src="images/classify/shuma.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>家用电器</p>
+					<div class="list-img-zc">
+						<img src="images/classify/jiadian.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>厨房小电</p>
+					<div class="list-img-zc">
+						<img src="images/classify/chufang.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>零食小吃</p>
+					<div class="list-img-zc">
+						<img src="images/classify/kaochuan.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>酒水饮料</p>
+					<div class="list-img-zc">
+						<img src="images/classify/jiu.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>个人健康</p>
+					<div class="list-img-zc">
+						<img src="images/classify/yundong.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>生活电器</p>
+					<div class="list-img-zc">
+						<img src="images/classify/dianfanbao.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>服饰</p>
+					<div class="list-img-zc">
+						<img src="images/classify/qunzi.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+			<div class="list-zc">
+				<a>
+					<p>五金家装</p>
+					<div class="list-img-zc">
+						<img src="images/classify/wujin.jpg" alt="" />
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script type="text/javascript" src="js/layout.js"></script>
+<script type="text/javascript">
+
+mui.init();
+
+mui('.list-zc').on("tap",'a',function(){
+	mui.openWindow({
+	    url: 'classify_list1.html', 
+	    id:'classify_list1',
+	    show:{
+	    	duration:300
+	    }
+	});
+})
+</script>
+</html>

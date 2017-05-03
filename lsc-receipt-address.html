@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="css/mui.css"/>
+    <link rel="stylesheet" href="css/receipt-address.css" />
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav">
+        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+        <h1 class="mui-title">收货地址</h1>
+    </header>
+    <!--用户地址-->
+	<article class="lsc-wrap mui-content">
+		<section class="lsc-input-message">
+			<form class="mui-input-group">
+			    <div class="mui-input-row lsc-default-container">
+			        <label for="takeName">收货人姓名</label>
+			    	<input id="takeName" type="text" class="mui-input-clear" placeholder="请输入收货人姓名">
+			    </div>
+			    <div class="mui-input-row lsc-default-container">
+			        <label for="contactPhone">联系电话</label>
+			    	<input id="contactPhone" type="number" class="mui-input-clear" placeholder="请输入收货人联系方式">
+			    </div>
+			    <div class="mui-input-row lsc-default-container">
+			        <label for="contactPhone">地址</label>
+			    	<input id="address" type="text" class="mui-input-clear" placeholder="请输入详细地址">
+			    </div>
+			    <!-- 简洁模式开关关闭状态 -->
+			    <div class="lsc-default-container">
+			    	<div>设为默认地址</div>
+					<div id="addressBtn" class="mui-switch mui-switch-mini">
+					  	<div  class="mui-switch-handle"></div>
+					</div>
+				</div>
+			</form>
+			<section class="lsc-new-address" id="addAddress">
+				<button type="button" class="mui-btn mui-btn-primary mui-action-back" >确认</button>
+			</section>
+		</section>
+	</article>
+</body>
+<script type="text/javascript" src="js/jquery-3.1.1.min.js" ></script>
+<script src="js/mui.min.js"></script>
+<script type="text/javascript" src="js/zmt-car-address.js" ></script>
+<script type="text/javascript" src="js/zmt-carsql.js"></script>
+<script type="text/javascript">
+  	//适配移动端
+  	(function (doc, win) {
+    var docEl = doc.documentElement,
+        resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+        recalc = function(){
+            var clientWidth = docEl.clientWidth;
+            if(!clientWidth) return;
+            if(clientWidth>=750){
+                docEl.style.fontSize = '100px';
+            }else{
+                docEl.style.fontSize = 100 * (clientWidth /750) + 'px';
+            }
+        };
+	    if (!doc.addEventListener) return;
+	    win.addEventListener(resizeEvt, recalc, false);
+	    doc.addEventListener('DOMContentLoaded', recalc, false);
+	})(document, window);
+	
+	mui.init({
+		beforeback: function(){
+//获得你要前往页面的webview id
+		var Scanner = plus.webview.getWebviewById('lsc-address-compile.html');
+		mui.fire(Scanner,'refresh');
+		//返回true，继续页面关闭逻辑
+		return true;
+		}
+	})
+	
+//	window.addEventListener('refresh',function(){
+//			plus.webview.getWebviewById('lsc-address-compile.html').reload();
+//		});
+//	
+
+
+</script>
+</html>
+  
